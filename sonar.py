@@ -1,12 +1,13 @@
 # run infer by infer.py
 import sys
-import subprocess
+import os
 
 def printf(format, *args):
     sys.stdout.write(format % args)
 
+
 if __name__ == '__main__':
-    changeDirectory = "cd ./paho.mqtt.java"
-    runInfer="infer analyze -- mvn verify -DskipTests"
-    subprocess.call(runInfer.split(), cwd="./paho.mqtt.java")
+    runSonar = "curl -u admin:0333 \"http://localhost:9000/api/issues/search?componentKeys=paho.mqtt.java&types=VULNERABILITY\""
+    os.system(runSonar)
     sys.exit()
+print("hello")
