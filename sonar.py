@@ -2,12 +2,10 @@
 import sys
 import os
 
-def printf(format, *args):
-    sys.stdout.write(format % args)
-
 
 if __name__ == '__main__':
-    runSonar = "curl -u admin:0333 \"http://localhost:9000/api/issues/search?componentKeys=paho.mqtt.java&types=VULNERABILITY\""
+    runSonar = "curl -u admin:0333 \"http://localhost:9000/api/issues/search?" \
+               "componentKeys=paho.mqtt.java&types=VULNERABILITY\""
     os.system(runSonar)
     sys.exit()
-print("hello")
+    print("hello")
