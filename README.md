@@ -9,7 +9,7 @@ conda activate py39
 // check if your pip is under your new venv
 which pip
 
-pip install -r requests.txt
+pip install -r requirements.txt
 ```
 
 
