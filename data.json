@@ -1,0 +1,97 @@
+{
+    "total": 2,
+    "p": 1,
+    "ps": 100,
+    "paging": {
+        "pageIndex": 1,
+        "pageSize": 100,
+        "total": 2
+    },
+    "effortTotal": 10,
+    "issues": [
+        {
+            "key": "AX121haZDrEe5diAf-fJ",
+            "rule": "java:S4830",
+            "severity": "CRITICAL",
+            "component": "Eclipse-Ditto:connectivity/service/src/main/java/org/eclipse/ditto/connectivity/service/messaging/internal/ssl/AcceptAnyTrustManager.java",
+            "project": "Eclipse-Ditto",
+            "line": 47,
+            "hash": "9c1bbe2c1511863dd198d69cad905c98",
+            "textRange": {
+                "startLine": 47,
+                "endLine": 47,
+                "startOffset": 16,
+                "endOffset": 34
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "Enable server certificate validation on this SSL/TLS connection.",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "yannic.klem@bosch.io",
+            "tags": [
+                "cert",
+                "cwe",
+                "owasp-a3",
+                "owasp-a6",
+                "privacy",
+                "ssl"
+            ],
+            "creationDate": "2021-04-23T05:37:41-0400",
+            "updateDate": "2021-12-01T11:22:15-0500",
+            "type": "VULNERABILITY",
+            "scope": "MAIN"
+        },
+        {
+            "key": "AX121haZDrEe5diAf-fK",
+            "rule": "java:S4830",
+            "severity": "CRITICAL",
+            "component": "Eclipse-Ditto:connectivity/service/src/main/java/org/eclipse/ditto/connectivity/service/messaging/internal/ssl/AcceptAnyTrustManager.java",
+            "project": "Eclipse-Ditto",
+            "line": 53,
+            "hash": "8cd26d5216c1dec66d3967d44c85f0c8",
+            "textRange": {
+                "startLine": 53,
+                "endLine": 53,
+                "startOffset": 16,
+                "endOffset": 34
+            },
+            "flows": [],
+            "status": "OPEN",
+            "message": "Enable server certificate validation on this SSL/TLS connection.",
+            "effort": "5min",
+            "debt": "5min",
+            "author": "yannic.klem@bosch.io",
+            "tags": [
+                "cert",
+                "cwe",
+                "owasp-a3",
+                "owasp-a6",
+                "privacy",
+                "ssl"
+            ],
+            "creationDate": "2021-04-23T05:37:41-0400",
+            "updateDate": "2021-12-01T11:22:15-0500",
+            "type": "VULNERABILITY",
+            "scope": "MAIN"
+        }
+    ],
+    "components": [
+        {
+            "key": "Eclipse-Ditto",
+            "enabled": true,
+            "qualifier": "TRK",
+            "name": "Eclipse Ditto",
+            "longName": "Eclipse Ditto"
+        },
+        {
+            "key": "Eclipse-Ditto:connectivity/service/src/main/java/org/eclipse/ditto/connectivity/service/messaging/internal/ssl/AcceptAnyTrustManager.java",
+            "enabled": true,
+            "qualifier": "FIL",
+            "name": "AcceptAnyTrustManager.java",
+            "longName": "connectivity/service/src/main/java/org/eclipse/ditto/connectivity/service/messaging/internal/ssl/AcceptAnyTrustManager.java",
+            "path": "connectivity/service/src/main/java/org/eclipse/ditto/connectivity/service/messaging/internal/ssl/AcceptAnyTrustManager.java"
+        }
+    ],
+    "facets": []
+}
