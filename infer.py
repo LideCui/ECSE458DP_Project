@@ -12,7 +12,7 @@ def parseInputToPath(args):
 
 def getGitReleases(args):
     # Put your GitHub token here
-    G = Github("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")  
+    G = Github("")  
     repo = G.get_repo("eclipse/paho.mqtt.java")
     releases = repo.get_releases()
     for release in releases:
