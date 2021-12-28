@@ -1,0 +1,3067 @@
+[
+  {
+    "bug_type": "RESOURCE_LEAK",
+    "qualifier": "resource of type `java.io.FileInputStream` acquired to `propFile` by call to `FileInputStream(...)` at line 202 is not released after line 204.\n**Note**: potential exception at line 203",
+    "severity": "ERROR",
+    "line": 204,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.init(java.awt.Container):void",
+    "procedure_start_line": 190,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 190,
+        "column_number": -1,
+        "description": "start of procedure init(...)"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 191,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 192,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 195,
+        "column_number": -1,
+        "description": "Skipping setLookAndFeel(...): unknown method"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 202,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 203,
+        "column_number": -1,
+        "description": "exception java.io.IOException"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 204,
+        "column_number": -1,
+        "description": ""
+      }
+    ],
+    "key": "MQTTFrame.java|init|RESOURCE_LEAK",
+    "node_key": "d54375129813b1c5d9f10eb00e12d6a9",
+    "hash": "945a7ee4d22d1dffe5a016f0de12c071",
+    "bug_type_hum": "Resource Leak"
+  },
+  {
+    "bug_type": "RESOURCE_LEAK",
+    "qualifier": "resource of type `java.io.FileInputStream` acquired by call to `FileInputStream(...)` at line 258 is not released after line 259.",
+    "severity": "ERROR",
+    "line": 259,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 190,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 190,
+        "column_number": -1,
+        "description": "start of procedure actionPerformed(...)"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 192,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 193,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 195,
+        "column_number": -1,
+        "description": "Taking false branch"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 248,
+        "column_number": -1,
+        "description": "Taking true branch"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 249,
+        "column_number": -1,
+        "description": "Skipping JFileChooser(...): unknown method"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 250,
+        "column_number": -1,
+        "description": "Skipping setMultiSelectionEnabled(...): unknown method"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 251,
+        "column_number": -1,
+        "description": "Taking true branch"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 253,
+        "column_number": -1,
+        "description": "Skipping getSelectedFile(): unknown method"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 258,
+        "column_number": -1,
+        "description": ""
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 259,
+        "column_number": -1,
+        "description": ""
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|RESOURCE_LEAK",
+    "node_key": "823c8c3bda3b671c82e0c1b7ec6b31f3",
+    "hash": "72199c6985185c33f8576ff4c8007b1a",
+    "bug_type_hum": "Resource Leak"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.actionPerformed(...)` indirectly writes to field `this.connected` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 561,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 561,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 561,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.disconnect()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "fe0edbdc01749d48528a341f3104dc65",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGoAAAAFAAAAJQAAABmgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgBARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.actionPerformed(...)` indirectly writes to field `this.led.state` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 554,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 554,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 554,
+        "column_number": -1,
+        "description": "call to void LED.setAmber()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 233,
+        "column_number": -1,
+        "description": "access to `this.led.state`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 361,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 361,
+        "column_number": -1,
+        "description": "call to void LED.setRed()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 305,
+        "column_number": -1,
+        "description": "access to `this.led.state`"
+      }
+    ],
+    "key": "MQTTFrame.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "59782f8b34df33563e24b0ab12776389",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMEAAAAIAAAAQAAAACqgsAEA6QD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmGgsAEBMQD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.actionPerformed(...)` reads without synchronization from `this.connected`. Potentially races with write in method `MQTTFrame.disconnect()`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 559,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 559,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 559,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "f9e44e2782ed0913a50195192c554a70",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAECLwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.qosList`. Potentially races with write in method `PubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 214,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 214,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 214,
+        "column_number": -1,
+        "description": "access to `this.qosList`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 103,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 103,
+        "column_number": -1,
+        "description": "access to `this.qosList`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "c8490143738b498c0660ae26b65ec506",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEA1gD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAGcA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1B1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.actionPerformed(...)` writes to field `this.fileContent` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 255,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "65eaed207ae5733dd62d442337424325",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGYAAAAEAAAAIQAAABagsAEA/wD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YUA="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.fileChooserCurrentDir`. Potentially races with write in method `PubPanel.actionPerformed(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 249,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 249,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 249,
+        "column_number": -1,
+        "description": "access to `this.fileChooserCurrentDir`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "access to `this.fileChooserCurrentDir`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "93ec870b4523c627032223aec1faa176",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAG8AAAAGAAAAKAAAAB2gsAEA+QD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQD8AP8EBEA="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.topic`. Potentially races with write in method `PubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 201,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 201,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 201,
+        "column_number": -1,
+        "description": "access to `this.topic`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 98,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 98,
+        "column_number": -1,
+        "description": "access to `this.topic`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "46453ff5455607311b2f504c707f1626",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEAyQD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAGIA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1B1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.retained`. Potentially races with write in method `PubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 215,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 215,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 215,
+        "column_number": -1,
+        "description": "access to `this.retained`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 111,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 111,
+        "column_number": -1,
+        "description": "access to `this.retained`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "370c6d03cba8e226cd11d6c106516792",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEA1wD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAG8A/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1B1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.hexDisplay`. Potentially races with write in method `PubPanel.actionPerformed(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 192,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 192,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 192,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "call to void PubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 336,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "435ef8d53d4ef001bf1fbc12a6d905e0",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEAwAD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQFQAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.actionPerformed(...)` writes to field `this.fileChooserCurrentDir` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 252,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "access to `this.fileChooserCurrentDir`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "f76f9fce3d44843adb4357c3650a8469",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGYAAAAEAAAAIQAAABagsAEA/AD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YUA="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` reads without synchronization from `this.fileContent`. Potentially races with write in method `PubPanel.actionPerformed(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 213,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 213,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 213,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "5342690f41e071b96dd6aad14d60ef91",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAG8AAAAGAAAAKAAAAB2gsAEA1QD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQD/AP8EBEA="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `PubPanel.actionPerformed(...)` indirectly reads without synchronization from `this.hexButton`. Potentially races with write in method `PubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 198,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "call to void PubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 339,
+        "column_number": -1,
+        "description": "access to `this.hexButton`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 140,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 140,
+        "column_number": -1,
+        "description": "access to `this.hexButton`"
+      }
+    ],
+    "key": "PubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "dcbb07ae7e3ca0722502becd8cfbb4e9",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBUwD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQCMAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.actionPerformed(...)` reads without synchronization from `this.fileContent`. Potentially races with write in method `SubPanel.updateReceivedData(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 253,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 253,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 253,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 301,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 301,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "SubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "889bcb6a883a46ed99d71a90cba90e4c",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEA/QD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQEtAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.actionPerformed(...)` reads without synchronization from `this.hexDisplay`. Potentially races with write in method `SubPanel.updateReceivedData(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 269,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 269,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 269,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "call to void SubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 379,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "SubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "c53fa1c057add3c0d5cfa716d1b85b50",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBDQD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQF7AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `SubPanel.actionPerformed(...)` indirectly writes to field `this.hexDisplay` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 270,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.actionPerformed(java.awt.event.ActionEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 270,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 270,
+        "column_number": -1,
+        "description": "call to void SubPanel.toHexString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 351,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "call to void SubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 379,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "SubPanel.java|actionPerformed|THREAD_SAFETY_VIOLATION",
+    "hash": "e550c2d24bf2a3e4eefadeea9bdde7d3",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBXwD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQF7AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.changedUpdate(...)` writes to field `this.fileContent` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 363,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.changedUpdate(javax.swing.event.DocumentEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "PubPanel.java|changedUpdate|THREAD_SAFETY_VIOLATION",
+    "hash": "ac5aee8167ac63afb529898cbf0e47e7",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBawD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQD/AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTHist.close()` writes to field `this.running` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 116,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTHist.close():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+        "line_number": 116,
+        "column_number": -1,
+        "description": "access to `this.running`"
+      }
+    ],
+    "key": "MQTTHist.java|close|THREAD_SAFETY_VIOLATION",
+    "hash": "dd89f2fe79ebeab796ef9d0d86468170",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGUAAAAEAAAAIQAAABagsAB0AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9NUVRUSGlzdC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.connect(...)` writes to field `this.mqtt` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 389,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "1e804cd1b5b18a89dee1d415ff1b629a",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGoAAAAFAAAAJQAAABmgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgBARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connect(...)` reads without synchronization from `this.opts`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 407,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 407,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 407,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 406,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "0c7b65ee7ccc35d8bd5211c2e774097c",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAHAAAAAGAAAAKQAAAB2gsAEBlwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBlgD/BARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.connect(...)` writes to field `this.opts` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 406,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 406,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 406,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 406,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "5f56ffc1be51be395307bc9d482875de",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGoAAAAFAAAAJQAAABmgsAEBlgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgBARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connect(...)` reads without synchronization from `this.traceEnabled`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 399,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 399,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 399,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.startTrace()"
+      },
+      {
+        "level": 2,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "a2ab1801a29e0eb9611024b0e227937e",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBjwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEC2gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connect(...)` reads without synchronization from `this.mqtt`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 385,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 385,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 385,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "9698c0e24232f32358620cd57db6c39f",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAHAAAAAGAAAAKQAAAB2gsAEBgQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/BARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.connect(...)` indirectly writes to field `this.traceEnabled` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 400,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connect(java.lang.String,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.startTrace()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.startTrace()"
+      },
+      {
+        "level": 2,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      }
+    ],
+    "key": "MQTTFrame.java|connect|THREAD_SAFETY_VIOLATION",
+    "hash": "97e4bc3da02d439228534a7a78510d3c",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGoAAAAFAAAAJQAAABmgsAEC2gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgBARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.connectionLost(...)` indirectly writes to field `this.led.state` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 596,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 596,
+        "column_number": -1,
+        "description": "call to void LED.setAmber()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 233,
+        "column_number": -1,
+        "description": "access to `this.led.state`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "3643d55242d65f6cfb5e9ec73891ac59",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGEAAAAEAAAAIAAAABWgsAEA6QD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connectionLost(...)` reads without synchronization from `this.led`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 644,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 644,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 644,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "0bdf93ce258063a32eb18ca7b05ec512",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEChAD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEA/AD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connectionLost(...)` reads with synchronization from `this.mqtt`. Potentially races with unsynchronized write in method `MQTTFrame.run()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 601,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 601,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 601,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "8375f200f2ddf32a27e96d67499383d8",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAECWQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connectionLost(...)` reads with synchronization from `this.connected`. Potentially races with unsynchronized write in method `MQTTFrame.disconnect()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 618,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 618,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 618,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "7a52efd529d0b1aae7261632ae7cd830",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAECagD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connectionLost(...)` indirectly reads with synchronization from `this.opts`. Potentially races with unsynchronized write in method `MQTTFrame.run()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 621,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 407,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 406,
+        "column_number": -1,
+        "description": "access to `this.opts`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "5186153cd2458bcb5256bfd4d08db7f2",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAHAAAAAGAAAAKQAAAB2gsAEBlwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBlgD/BARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.connectionLost(...)` indirectly reads without synchronization from `this.connect`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 652,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 652,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 652,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.setConnected(boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 862,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "3776e3f770286ce0444620c96b92c447",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEDXgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBAAD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.connectionLost(...)` indirectly writes to field `this.led.off` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 651,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.connectionLost(java.lang.Throwable):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 651,
+        "column_number": -1,
+        "description": "call to void LED.setGreen()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 288,
+        "column_number": -1,
+        "description": "access to `this.led.off`"
+      }
+    ],
+    "key": "MQTTFrame.java|connectionLost|THREAD_SAFETY_VIOLATION",
+    "hash": "f35065b2caa08db662c3ff33bc42f114",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGEAAAAEAAAAIAAAABWgsAEBIAD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.disconnect()` indirectly writes to field `this.led.off` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 361,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.disconnect():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 361,
+        "column_number": -1,
+        "description": "call to void LED.setRed()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 306,
+        "column_number": -1,
+        "description": "access to `this.led.off`"
+      }
+    ],
+    "key": "MQTTFrame.java|disconnect|THREAD_SAFETY_VIOLATION",
+    "hash": "71c8170e3fb9d66bccc491d3c267b129",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGEAAAAEAAAAIAAAABWgsAEBMgD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.disconnect()` reads without synchronization from `this.mqtt`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 345,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.disconnect():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 345,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 345,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|disconnect|THREAD_SAFETY_VIOLATION",
+    "hash": "cb889308b1e665f2b81947f0b776ecbb",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBWQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.disconnect()` indirectly reads without synchronization from `this.connect`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 363,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.disconnect():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.setConnected(boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 862,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      }
+    ],
+    "key": "MQTTFrame.java|disconnect|THREAD_SAFETY_VIOLATION",
+    "hash": "2e125943aedb332682d5d0e3267e3417",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEDXgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBAAD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.disconnect()` reads without synchronization from `this.led`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 358,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.disconnect():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 358,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 358,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      }
+    ],
+    "key": "MQTTFrame.java|disconnect|THREAD_SAFETY_VIOLATION",
+    "hash": "6ab770cd598bd21badba113d53309e60",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBZgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEA/AD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.disconnect()` writes to field `this.connected` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 337,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.disconnect():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|disconnect|THREAD_SAFETY_VIOLATION",
+    "hash": "5a091eb5bf2bc1eb4ad7d7fdeceb6fe6",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGcAAAAEAAAAIgAAABagsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.init()` writes to field `this.hexDisplay` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 139,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.init():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 139,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 139,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 198,
+        "column_number": -1,
+        "description": "call to void PubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 336,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "PubPanel.java|init|THREAD_SAFETY_VIOLATION",
+    "hash": "965e57c7006da3de09ad3428393b971a",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEAiwD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQFQAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `SubPanel.init()` writes to field `this.hexDisplay` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 178,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.init():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 178,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 178,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "call to void SubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 379,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "SubPanel.java|init|THREAD_SAFETY_VIOLATION",
+    "hash": "a0a83f44b5bde1ebca6d731226188d36",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEAsgD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQF7AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.insertUpdate(...)` indirectly writes to field `this.fileContent` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 372,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.insertUpdate(javax.swing.event.DocumentEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 372,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 372,
+        "column_number": -1,
+        "description": "call to void PubPanel.changedUpdate(DocumentEvent)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "PubPanel.java|insertUpdate|THREAD_SAFETY_VIOLATION",
+    "hash": "81fdc8911128a09e0ac1ecab557a4933",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBawD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQD/AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.publish(...)` reads without synchronization from `this.mqtt`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 319,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.publish(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 319,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 319,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|publish|THREAD_SAFETY_VIOLATION",
+    "hash": "3e5c51fadb8016783488137499b431fd",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBPwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.publish(...)` reads without synchronization from `this.connected`. Potentially races with write in method `MQTTFrame.disconnect()`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 317,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.publish(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 317,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 317,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|publish|THREAD_SAFETY_VIOLATION",
+    "hash": "5fd0d9621f26bed625862926608f378c",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBPQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `PubPanel.removeUpdate(...)` indirectly writes to field `this.fileContent` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 380,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.PubPanel.removeUpdate(javax.swing.event.DocumentEvent):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 380,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 380,
+        "column_number": -1,
+        "description": "call to void PubPanel.changedUpdate(DocumentEvent)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 363,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+        "line_number": 255,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "PubPanel.java|removeUpdate|THREAD_SAFETY_VIOLATION",
+    "hash": "0ffef16e9d692dd7b8b87b39de28225d",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBawD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvUHViUGFuZWwuamF2YaCwAQD/AP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9QdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `LED.run()` reads without synchronization from `this.off`. Potentially races with write in method `LED.setOff()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 214,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.LED.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 214,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 214,
+        "column_number": -1,
+        "description": "access to `this.off`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 296,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 296,
+        "column_number": -1,
+        "description": "access to `this.off`"
+      }
+    ],
+    "key": "LED.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "dd55b7d88a3218292857ccf7b5e295c7",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMEAAAAIAAAAQAAAACqgsAEA1gD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmGgsAEBKAD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `LED.run()` reads without synchronization from `this.flashing`. Potentially races with write in method `LED.setOff()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 212,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.LED.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 212,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 212,
+        "column_number": -1,
+        "description": "access to `this.flashing`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 297,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 297,
+        "column_number": -1,
+        "description": "access to `this.flashing`"
+      }
+    ],
+    "key": "LED.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "0feff28adff748a2cf168804c0750159",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMEAAAAIAAAAQAAAACqgsAEA1AD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmGgsAEBKQD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` reads with synchronization from `this.connected`. Potentially races with unsynchronized write in method `MQTTFrame.disconnect()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 519,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 519,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 519,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "7da2b3daa112a91b102d13a5df6ecc47",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAECBwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.run()` indirectly writes to field `this.mqtt` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 484,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "964280ef7fffd96b4c8cbc59913541c3",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGcAAAAEAAAAIgAAABagsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` indirectly reads without synchronization from `this.connect`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 491,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 491,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 491,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.setConnected(boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 862,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 256,
+        "column_number": -1,
+        "description": "access to `this.connect`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "748e953af1468371d4112da39cda28aa",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEDXgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBAAD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.run()` writes to field `this.connected` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 489,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 489,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "be0bb3df622933ca6a52595298941bf3",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGcAAAAEAAAAIgAAABagsAEB6QD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` reads without synchronization from `this.ipAddress`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 471,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 471,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 471,
+        "column_number": -1,
+        "description": "access to `this.ipAddress`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 236,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 236,
+        "column_number": -1,
+        "description": "access to `this.ipAddress`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "64e1a3ae13a9e2960461516e4c9333cf",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEB1wD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEA7AD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` reads without synchronization from `this.port`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 472,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 472,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 472,
+        "column_number": -1,
+        "description": "access to `this.port`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 242,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 242,
+        "column_number": -1,
+        "description": "access to `this.port`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "6eaa58509c2a83c60f9c1bc3992deee7",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEB2AD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEA8gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` reads without synchronization from `this.led`. Potentially races with write in method `MQTTFrame.init(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 490,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 490,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 490,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 252,
+        "column_number": -1,
+        "description": "access to `this.led`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "41ca11859072b69263ab2860a94b5480",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEB6gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEA/AD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.run()` reads with synchronization from `this.mqtt`. Potentially races with unsynchronized write in method `MQTTFrame.run()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 520,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 520,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 520,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 484,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "2424a06ecb35951c60dd89d446085fdf",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAECCAD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTHist.run()` reads without synchronization from `this.running`. Potentially races with write in method `MQTTHist.close()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 165,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTHist.run():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+        "line_number": 165,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+        "line_number": 165,
+        "column_number": -1,
+        "description": "access to `this.running`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+        "line_number": 116,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+        "line_number": 116,
+        "column_number": -1,
+        "description": "access to `this.running`"
+      }
+    ],
+    "key": "MQTTHist.java|run|THREAD_SAFETY_VIOLATION",
+    "hash": "c5077f69e6f09dab7ea297cc911662e6",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEApQD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEhpc3QuamF2YaCwAHQA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L01RVFRIaXN0LmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `LED.setFlash()` reads without synchronization from `this.flashing`. Potentially races with write in method `LED.setOff()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 273,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.LED.setFlash():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 273,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 273,
+        "column_number": -1,
+        "description": "access to `this.flashing`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 297,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+        "line_number": 297,
+        "column_number": -1,
+        "description": "access to `this.flashing`"
+      }
+    ],
+    "key": "LED.java|setFlash|THREAD_SAFETY_VIOLATION",
+    "hash": "727089ecc12719279fd84429aa784af9",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMEAAAAIAAAAQAAAACqgsAEBEQD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmGgsAEBKQD/kglWb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTEVELmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.startTrace()` writes to field `this.traceEnabled` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 730,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.startTrace():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.startTrace()"
+      },
+      {
+        "level": 2,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      }
+    ],
+    "key": "MQTTFrame.java|startTrace|THREAD_SAFETY_VIOLATION",
+    "hash": "9db96c12aac407a25792f65fbb80d060",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGoAAAAFAAAAJQAAABmgsAEC2gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgBARA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.stopTrace()` reads without synchronization from `this.mqtt`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 754,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.stopTrace():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 754,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 754,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|stopTrace|THREAD_SAFETY_VIOLATION",
+    "hash": "23fdbf168f1331152963650ccf92192f",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEC8gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `MQTTFrame.stopTrace()` writes to field `this.traceEnabled` outside of synchronization.\n Reporting because another access to the same memory occurs on a background thread, although this access may not.",
+    "severity": "WARNING",
+    "line": 753,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.stopTrace():void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 753,
+        "column_number": -1,
+        "description": "<Write on unknown thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 753,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write on background thread>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 400,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.startTrace()"
+      },
+      {
+        "level": 2,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 730,
+        "column_number": -1,
+        "description": "access to `this.traceEnabled`"
+      }
+    ],
+    "key": "MQTTFrame.java|stopTrace|THREAD_SAFETY_VIOLATION",
+    "hash": "7bbf8d9394262655b1ed2994801db4c7",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEC8QD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEC2gD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.subscription(...)` reads without synchronization from `this.connected`. Potentially races with write in method `MQTTFrame.disconnect()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 430,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.subscription(java.lang.String,int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 430,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 430,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 337,
+        "column_number": -1,
+        "description": "access to `this.connected`"
+      }
+    ],
+    "key": "MQTTFrame.java|subscription|THREAD_SAFETY_VIOLATION",
+    "hash": "c93b3c0931278dff1048ee9e3a1b3f22",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBrgD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBUQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `MQTTFrame.subscription(...)` reads without synchronization from `this.mqtt`. Potentially races with write in method `MQTTFrame.connectionLost(...)`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 447,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.MQTTFrame.subscription(java.lang.String,int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 447,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 447,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 621,
+        "column_number": -1,
+        "description": "call to void MQTTFrame.connect(String,boolean)"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+        "line_number": 389,
+        "column_number": -1,
+        "description": "access to `this.mqtt`"
+      }
+    ],
+    "key": "MQTTFrame.java|subscription|THREAD_SAFETY_VIOLATION",
+    "hash": "1ed7f4dad6d6beb2aabdb32d5831165c",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAM0AAAAIAAAARAAAACygsAEBvwD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmGgsAEBhQD/kglcb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvTVFUVEZyYW1lLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.updateReceivedData(...)` reads without synchronization from `this.receivedTopic`. Potentially races with write in method `SubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 294,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 294,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 294,
+        "column_number": -1,
+        "description": "access to `this.receivedTopic`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 101,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 101,
+        "column_number": -1,
+        "description": "access to `this.receivedTopic`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "953ba51e350ccc1dc0107f7d619ec1f9",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEBJgD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAGUA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1N1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.updateReceivedData(...)` reads without synchronization from `this.receivedQoS`. Potentially races with write in method `SubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 295,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 295,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 295,
+        "column_number": -1,
+        "description": "access to `this.receivedQoS`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 107,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 107,
+        "column_number": -1,
+        "description": "access to `this.receivedQoS`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "8df6f1126ed682e084658af168bb0ee9",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEBJwD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAGsA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1N1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.updateReceivedData(...)` reads without synchronization from `this.hexDisplay`. Potentially races with write in method `SubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 287,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 287,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 287,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 178,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 178,
+        "column_number": -1,
+        "description": "access to `this.hexDisplay`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "91486eac48b36d2bbd3f5133557ec737",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBHwD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQCyAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.updateReceivedData(...)` reads without synchronization from `this.receivedRetain`. Potentially races with write in method `SubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 296,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 296,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 296,
+        "column_number": -1,
+        "description": "access to `this.receivedRetain`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 113,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 113,
+        "column_number": -1,
+        "description": "access to `this.receivedRetain`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "e7140167ce4624dbaae37b4f5b407e3a",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMoAAAAIAAAAQgAAACygsAEBKAD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAHEA/5IJW29yZy5lY2xpcHNlLnBhaG8uc2FtcGxlLnV0aWxpdHkvc3JjL21haW4vamF2YS9vcmcvZWNsaXBzZS9wYWhvL3NhbXBsZS91dGlsaXR5L1N1YlBhbmVsLmphdmFA"
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Unprotected write. Non-private method `SubPanel.updateReceivedData(...)` writes to field `this.fileContent` outside of synchronization.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 301,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 301,
+        "column_number": -1,
+        "description": "access to `this.fileContent`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "261d82609aeb01080cc4a13b3098326b",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAGYAAAAEAAAAIQAAABagsAEBLQD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YUA="
+  },
+  {
+    "bug_type": "THREAD_SAFETY_VIOLATION",
+    "qualifier": "Read/Write race. Non-private method `SubPanel.updateReceivedData(...)` indirectly reads without synchronization from `this.hexButton`. Potentially races with write in method `SubPanel.init()`.\n Reporting because this access may occur on a background thread.",
+    "severity": "WARNING",
+    "line": 291,
+    "column": -1,
+    "procedure": "org.eclipse.paho.sample.utility.SubPanel.updateReceivedData(java.lang.String,byte[],int,boolean):void",
+    "procedure_start_line": 0,
+    "file": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+    "bug_trace": [
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "<Read trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 291,
+        "column_number": -1,
+        "description": "call to void SubPanel.toCharString()"
+      },
+      {
+        "level": 1,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 382,
+        "column_number": -1,
+        "description": "access to `this.hexButton`"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 179,
+        "column_number": -1,
+        "description": "<Write trace>"
+      },
+      {
+        "level": 0,
+        "filename": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/SubPanel.java",
+        "line_number": 179,
+        "column_number": -1,
+        "description": "access to `this.hexButton`"
+      }
+    ],
+    "key": "SubPanel.java|updateReceivedData|THREAD_SAFETY_VIOLATION",
+    "hash": "af37e4fa4eed2750f844954348e8ae6b",
+    "bug_type_hum": "Thread Safety Violation",
+    "access": "hJWmvgAAAMsAAAAIAAAAQgAAACygsAEBfgD/kglbb3JnLmVjbGlwc2UucGFoby5zYW1wbGUudXRpbGl0eS9zcmMvbWFpbi9qYXZhL29yZy9lY2xpcHNlL3BhaG8vc2FtcGxlL3V0aWxpdHkvU3ViUGFuZWwuamF2YaCwAQCzAP+SCVtvcmcuZWNsaXBzZS5wYWhvLnNhbXBsZS51dGlsaXR5L3NyYy9tYWluL2phdmEvb3JnL2VjbGlwc2UvcGFoby9zYW1wbGUvdXRpbGl0eS9TdWJQYW5lbC5qYXZhQA=="
+  }
+]

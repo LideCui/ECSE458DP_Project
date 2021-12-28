@@ -1,0 +1,3502 @@
+{
+  "total": 108,
+  "p": 1,
+  "ps": 100,
+  "paging": { "pageIndex": 1, "pageSize": 100, "total": 108 },
+  "effortTotal": 1283,
+  "issues": [
+    {
+      "key": "AXzncZ1F_NB_WEcDEY2G",
+      "rule": "java:S2445",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 259,
+      "hash": "3c859b92779221b0354ce42ddab72b83",
+      "textRange": {
+        "startLine": 259,
+        "endLine": 295,
+        "startOffset": 2,
+        "endOffset": 3
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"token\" is a method parameter, and should not be used for synchronization.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "ranjan.dasgupta@us.ibm.com",
+      "tags": ["cert", "cwe", "multi-threading"],
+      "creationDate": "2020-06-24T16:20:35-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ4H_NB_WEcDEY6P",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+      "project": "paho.mqtt.java",
+      "line": 848,
+      "hash": "b666f36cd0e074f1565d3098ee10d8a8",
+      "textRange": {
+        "startLine": 848,
+        "endLine": 848,
+        "startOffset": 11,
+        "endOffset": 24
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+              "textRange": {
+                "startLine": 843,
+                "endLine": 843,
+                "startOffset": 31,
+                "endOffset": 36
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "ranjan.dasgupta@us.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2020-06-23T15:31:49-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ4H_NB_WEcDEY6R",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+      "project": "paho.mqtt.java",
+      "line": 894,
+      "hash": "b666f36cd0e074f1565d3098ee10d8a8",
+      "textRange": {
+        "startLine": 894,
+        "endLine": 894,
+        "startOffset": 11,
+        "endOffset": 24
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+              "textRange": {
+                "startLine": 889,
+                "endLine": 889,
+                "startOffset": 31,
+                "endOffset": 36
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "ranjan.dasgupta@us.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2020-06-23T15:31:49-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZrV_NB_WEcDEYw_",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 288,
+      "hash": "28bd2f6f4edef4289afc17324e26106e",
+      "textRange": {
+        "startLine": 288,
+        "endLine": 288,
+        "startOffset": 4,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"renameTo\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "angusyoung@gmail.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2019-02-21T00:48:50-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZrV_NB_WEcDEYxA",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 303,
+      "hash": "22b52cdc1303da5309ced103592e55fc",
+      "textRange": {
+        "startLine": 303,
+        "endLine": 303,
+        "startOffset": 3,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "angusyoung@gmail.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2019-02-21T00:48:50-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7a",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 281,
+      "hash": "28bd2f6f4edef4289afc17324e26106e",
+      "textRange": {
+        "startLine": 281,
+        "endLine": 281,
+        "startOffset": 4,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"renameTo\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "angusyoung@gmail.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2019-02-21T00:48:50-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7b",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 296,
+      "hash": "22b52cdc1303da5309ced103592e55fc",
+      "textRange": {
+        "startLine": 296,
+        "endLine": 296,
+        "startOffset": 3,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "angusyoung@gmail.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2019-02-21T00:48:50-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ3P_NB_WEcDEY50",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/TCPNetworkModule.java",
+      "project": "paho.mqtt.java",
+      "line": 72,
+      "hash": "eb57ccd5c546d649f24702ae5fe167bc",
+      "textRange": {
+        "startLine": 72,
+        "endLine": 72,
+        "startOffset": 108,
+        "endOffset": 109
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this multiplication operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "angusyoung@gmail.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2019-02-20T15:46:27-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaKS_NB_WEcDEZCd",
+      "rule": "java:S5783",
+      "severity": "CRITICAL",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+      "project": "paho.mqtt.java",
+      "line": 664,
+      "hash": "80d5b17efc16ace990c07580fc3e85eb",
+      "textRange": {
+        "startLine": 664,
+        "endLine": 664,
+        "startOffset": 3,
+        "endOffset": 6
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 665,
+                "endLine": 665,
+                "startOffset": 31,
+                "endOffset": 52
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 667,
+                "endLine": 667,
+                "startOffset": 30,
+                "endOffset": 37
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 668,
+                "endLine": 668,
+                "startOffset": 17,
+                "endOffset": 34
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor the body of this try/catch to not have multiple invocations throwing the same checked exception.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["junit", "tests"],
+      "creationDate": "2019-02-08T12:53:28-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "TEST"
+    },
+    {
+      "key": "AXzncZ1F_NB_WEcDEY19",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 123,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 123,
+        "endLine": 123,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 123,
+                "endLine": 123,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1F_NB_WEcDEY1_",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 152,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 152,
+        "endLine": 152,
+        "startOffset": 39,
+        "endOffset": 50
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 152,
+                "endLine": 152,
+                "startOffset": 18,
+                "endOffset": 23
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ05_NB_WEcDEY1z",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 86,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 86,
+        "endLine": 86,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+              "textRange": {
+                "startLine": 86,
+                "endLine": 86,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ05_NB_WEcDEY11",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 106,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 106,
+        "endLine": 106,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+              "textRange": {
+                "startLine": 106,
+                "endLine": 106,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ0X_NB_WEcDEY1H",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+      "project": "paho.mqtt.java",
+      "line": 80,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 80,
+        "endLine": 80,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+              "textRange": {
+                "startLine": 80,
+                "endLine": 80,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ0X_NB_WEcDEY1J",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+      "project": "paho.mqtt.java",
+      "line": 106,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 106,
+        "endLine": 106,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+              "textRange": {
+                "startLine": 106,
+                "endLine": 106,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2019-01-09T15:12:16-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYu1",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 110,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 110,
+        "endLine": 110,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 110,
+                "endLine": 110,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYu3",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 142,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 142,
+        "endLine": 142,
+        "startOffset": 39,
+        "endOffset": 50
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 142,
+                "endLine": 142,
+                "startOffset": 18,
+                "endOffset": 23
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZp6_NB_WEcDEYvp",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 84,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 84,
+        "endLine": 84,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+              "textRange": {
+                "startLine": 84,
+                "endLine": 84,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZp6_NB_WEcDEYvr",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 104,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 104,
+        "endLine": 104,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+              "textRange": {
+                "startLine": 104,
+                "endLine": 104,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqz_NB_WEcDEYwT",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+      "project": "paho.mqtt.java",
+      "line": 79,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 79,
+        "endLine": 79,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+              "textRange": {
+                "startLine": 79,
+                "endLine": 79,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqz_NB_WEcDEYwV",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+      "project": "paho.mqtt.java",
+      "line": 105,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 105,
+        "endLine": 105,
+        "startOffset": 37,
+        "endOffset": 48
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+              "textRange": {
+                "startLine": 105,
+                "endLine": 105,
+                "startOffset": 16,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-21T17:59:32-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqE_NB_WEcDEYvz",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.java",
+      "project": "paho.mqtt.java",
+      "line": 133,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 133,
+        "endLine": 133,
+        "startOffset": 39,
+        "endOffset": 50
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.java",
+              "textRange": {
+                "startLine": 133,
+                "endLine": 133,
+                "startOffset": 18,
+                "endOffset": 23
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-10T11:48:20-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1Y_NB_WEcDEY2k",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/DisconnectedMessageBuffer.java",
+      "project": "paho.mqtt.java",
+      "line": 116,
+      "hash": "90d3fa3f7dffc25e0d6c4ca3be4d197b",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 40,
+        "endOffset": 51
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/DisconnectedMessageBuffer.java",
+              "textRange": {
+                "startLine": 116,
+                "endLine": 116,
+                "startOffset": 19,
+                "endOffset": 24
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-12-10T11:48:20-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY41",
+      "rule": "java:S2153",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1184,
+      "hash": "82b623315e39dfc2d048adf3ce01b012",
+      "textRange": {
+        "startLine": 1184,
+        "endLine": 1184,
+        "startOffset": 23,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the boxing to \"Integer\"; The argument is already of the same type.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["clumsy"],
+      "creationDate": "2018-06-06T06:26:30-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2T_NB_WEcDEY5J",
+      "rule": "java:S2153",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1610,
+      "hash": "6d52be3f532e88d47f7c6f5df070cf40",
+      "textRange": {
+        "startLine": 1610,
+        "endLine": 1610,
+        "startOffset": 36,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the boxing to \"Integer\"; The argument is already of the same type.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["clumsy"],
+      "creationDate": "2018-06-06T06:26:30-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaKy_NB_WEcDEZCm",
+      "rule": "java:S5783",
+      "severity": "CRITICAL",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java",
+      "project": "paho.mqtt.java",
+      "line": 344,
+      "hash": "80d5b17efc16ace990c07580fc3e85eb",
+      "textRange": {
+        "startLine": 344,
+        "endLine": 344,
+        "startOffset": 2,
+        "endOffset": 5
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java",
+              "textRange": {
+                "startLine": 345,
+                "endLine": 345,
+                "startOffset": 10,
+                "endOffset": 17
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java",
+              "textRange": {
+                "startLine": 346,
+                "endLine": 346,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor the body of this try/catch to not have multiple invocations throwing the same checked exception.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["junit", "tests"],
+      "creationDate": "2018-05-01T11:12:29-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "TEST"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY43",
+      "rule": "java:S2153",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1197,
+      "hash": "96c80ece5007041ec2a9e14ed8b242dc",
+      "textRange": {
+        "startLine": 1197,
+        "endLine": 1197,
+        "startOffset": 8,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the boxing to \"Integer\"; The argument is already of the same type.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["clumsy"],
+      "creationDate": "2018-04-17T05:38:00-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZt6_NB_WEcDEYyZ",
+      "rule": "Web:S5254",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/package-info.html",
+      "project": "paho.mqtt.java",
+      "line": 2,
+      "hash": "166248a6129a1e4370d20adc2d4c23f3",
+      "textRange": {
+        "startLine": 2,
+        "endLine": 2,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add \"lang\" and/or \"xml:lang\" attributes to this \"\u003chtml\u003e\" element",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["accessibility", "wcag2-a"],
+      "creationDate": "2018-03-06T06:52:17-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY45",
+      "rule": "java:S2153",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1206,
+      "hash": "2a8fbbd54c2badcab4265d8dffe3c5e7",
+      "textRange": {
+        "startLine": 1206,
+        "endLine": 1206,
+        "startOffset": 24,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the boxing to \"Integer\"; The argument is already of the same type.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["clumsy"],
+      "creationDate": "2018-02-21T05:45:06-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY3v",
+      "rule": "java:S3077",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 115,
+      "hash": "76083b7afb8f84e75dca1be6d5b61028",
+      "textRange": {
+        "startLine": 115,
+        "endLine": 115,
+        "startOffset": 1,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a thread-safe type; adding \"volatile\" is not enough to make this field thread-safe.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY3w",
+      "rule": "java:S3077",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 116,
+      "hash": "2c510625fb89de83122362aa807b17fe",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 1,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a thread-safe type; adding \"volatile\" is not enough to make this field thread-safe.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY4d",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 837,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 837,
+        "endLine": 837,
+        "startOffset": 14,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2S_NB_WEcDEY5E",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1499,
+      "hash": "f8f52a7d99beadbd84579638ccc8cb2a",
+      "textRange": {
+        "startLine": 1499,
+        "endLine": 1499,
+        "startOffset": 13,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1F_NB_WEcDEY2E",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 195,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 195,
+        "endLine": 195,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1F_NB_WEcDEY2D",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 232,
+      "hash": "a3ffc77f096600b20309949721db52b5",
+      "textRange": {
+        "startLine": 232,
+        "endLine": 232,
+        "startOffset": 12,
+        "endOffset": 24
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 192,
+                "endLine": 192,
+                "startOffset": 21,
+                "endOffset": 25
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1F_NB_WEcDEY2R",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 388,
+      "hash": "f8f52a7d99beadbd84579638ccc8cb2a",
+      "textRange": {
+        "startLine": 388,
+        "endLine": 388,
+        "startOffset": 14,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ2B_NB_WEcDEY3i",
+      "rule": "java:S1872",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "project": "paho.mqtt.java",
+      "line": 36,
+      "hash": "243ce32bffa32b9f03bdf09138c6b933",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 6,
+        "endOffset": 81
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use an \"instanceof\" comparison instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ3E_NB_WEcDEY5v",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/FileLock.java",
+      "project": "paho.mqtt.java",
+      "line": 91,
+      "hash": "1e7b7369e5225b3a260896b9e167c2a8",
+      "textRange": {
+        "startLine": 91,
+        "endLine": 91,
+        "startOffset": 3,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ1h_NB_WEcDEY2r",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java",
+      "project": "paho.mqtt.java",
+      "line": 42,
+      "hash": "9eb0c68e321744cbe53058cd4bf8296b",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 9,
+        "endOffset": 37
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java",
+              "textRange": {
+                "startLine": 42,
+                "endLine": 42,
+                "startOffset": 9,
+                "endOffset": 37
+              },
+              "msg": "\u0027INSTANCE\u0027 is dereferenced."
+            },
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java",
+              "textRange": {
+                "startLine": 25,
+                "endLine": 25,
+                "startOffset": 6,
+                "endOffset": 22
+              },
+              "msg": "Implies \u0027INSTANCE\u0027 can be null."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"INSTANCE\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ12_NB_WEcDEY3M",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 181,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 181,
+        "endLine": 181,
+        "startOffset": 14,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ12_NB_WEcDEY3T",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 336,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 336,
+        "endLine": 336,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ12_NB_WEcDEY3g",
+      "rule": "java:S2583",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 340,
+      "hash": "1f25c39ebb147a02be125fd9aac055a1",
+      "textRange": {
+        "startLine": 340,
+        "endLine": 340,
+        "startOffset": 10,
+        "endOffset": 15
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+              "textRange": {
+                "startLine": 340,
+                "endLine": 340,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Expression is always false."
+            },
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+              "textRange": {
+                "startLine": 330,
+                "endLine": 330,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Implies \u0027sent\u0027 is true."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Change this condition so that it does not always evaluate to \"false\"",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "pitfall", "suspicious", "unused"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ12_NB_WEcDEY3W",
+      "rule": "java:S1751",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 344,
+      "hash": "50859f1ca6aecb592f26b03ac2f63d79",
+      "textRange": {
+        "startLine": 344,
+        "endLine": 344,
+        "startOffset": 4,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this \"throw\" statement or make it conditional.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5C_NB_WEcDEY7L",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 146,
+      "hash": "f28363027d81bfa3b554595865c47847",
+      "textRange": {
+        "startLine": 146,
+        "endLine": 146,
+        "startOffset": 4,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5C_NB_WEcDEY7N",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 167,
+      "hash": "7a336682c6cd8774d90ec3bd71cce88b",
+      "textRange": {
+        "startLine": 167,
+        "endLine": 167,
+        "startOffset": 4,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5C_NB_WEcDEY7P",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 168,
+      "hash": "c9d041a5e7aac16e64811209024c19f8",
+      "textRange": {
+        "startLine": 168,
+        "endLine": 168,
+        "startOffset": 4,
+        "endOffset": 30
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"renameTo\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7h",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 172,
+      "hash": "1a01ab2613215d13180d3433d41b1314",
+      "textRange": {
+        "startLine": 172,
+        "endLine": 172,
+        "startOffset": 26,
+        "endOffset": 52
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"FileOutputStream\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "denial-of-service", "leak"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7Q",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 181,
+      "hash": "7a336682c6cd8774d90ec3bd71cce88b",
+      "textRange": {
+        "startLine": 181,
+        "endLine": 181,
+        "startOffset": 4,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7S",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 192,
+      "hash": "22b52cdc1303da5309ced103592e55fc",
+      "textRange": {
+        "startLine": 192,
+        "endLine": 192,
+        "startOffset": 5,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7U",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 193,
+      "hash": "8d9673f90a9126ee49ad61f3d00fc0d6",
+      "textRange": {
+        "startLine": 193,
+        "endLine": 193,
+        "startOffset": 5,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"renameTo\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7i",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 204,
+      "hash": "45a7b3318bb27a04be645e05c0205c01",
+      "textRange": {
+        "startLine": 204,
+        "endLine": 204,
+        "startOffset": 25,
+        "endOffset": 50
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"FileInputStream\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "denial-of-service", "leak"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7W",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 228,
+      "hash": "22b52cdc1303da5309ced103592e55fc",
+      "textRange": {
+        "startLine": 228,
+        "endLine": 228,
+        "startOffset": 3,
+        "endOffset": 17
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7Y",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 280,
+      "hash": "23e70c42172932576d880cb30067679c",
+      "textRange": {
+        "startLine": 280,
+        "endLine": 280,
+        "startOffset": 4,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ5D_NB_WEcDEY7d",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 298,
+      "hash": "f28363027d81bfa3b554595865c47847",
+      "textRange": {
+        "startLine": 298,
+        "endLine": 298,
+        "startOffset": 2,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ66_NB_WEcDEY9N",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 113,
+      "hash": "25ee879e58fc758cb223f1a0bb3de369",
+      "textRange": {
+        "startLine": 113,
+        "endLine": 113,
+        "startOffset": 9,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ66_NB_WEcDEY9O",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 116,
+      "hash": "b95782f829062ae934a3e2b380fe9093",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ66_NB_WEcDEY9P",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 119,
+      "hash": "256b759e74ee203350056d347d1d35ad",
+      "textRange": {
+        "startLine": 119,
+        "endLine": 119,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZzE_NB_WEcDEY0u",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/websocket/WebSocketReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 87,
+      "hash": "f8f52a7d99beadbd84579638ccc8cb2a",
+      "textRange": {
+        "startLine": 87,
+        "endLine": 87,
+        "startOffset": 12,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ_D_NB_WEcDEY_x",
+      "rule": "java:S3551",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/MqttException.java",
+      "project": "paho.mqtt.java",
+      "line": 117,
+      "hash": "6605b5f90b998371a3ee2368f45bb47d",
+      "textRange": {
+        "startLine": 117,
+        "endLine": 117,
+        "startOffset": 18,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make this method \"synchronized\" to match the parent class implementation.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ9m_NB_WEcDEY_T",
+      "rule": "java:S2183",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/packet/MqttDataTypes.java",
+      "project": "paho.mqtt.java",
+      "line": 79,
+      "hash": "bd97df0ef49bbb78982c2089b21798d1",
+      "textRange": {
+        "startLine": 79,
+        "endLine": 79,
+        "startOffset": 29,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this useless shift",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZ9m_NB_WEcDEY_U",
+      "rule": "java:S2183",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/packet/MqttDataTypes.java",
+      "project": "paho.mqtt.java",
+      "line": 100,
+      "hash": "6462c186dfbd32e66ef5b824e3ba7717",
+      "textRange": {
+        "startLine": 100,
+        "endLine": 100,
+        "startOffset": 34,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this useless shift",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYu_",
+      "rule": "java:S2445",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 250,
+      "hash": "3c859b92779221b0354ce42ddab72b83",
+      "textRange": {
+        "startLine": 250,
+        "endLine": 284,
+        "startOffset": 2,
+        "endOffset": 3
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"token\" is a method parameter, and should not be used for synchronization.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "jpwsutton@gmail.com",
+      "tags": ["cert", "cwe", "multi-threading"],
+      "creationDate": "2017-10-06T10:42:08-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZoq_NB_WEcDEYuo",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.java",
+      "project": "paho.mqtt.java",
+      "line": 71,
+      "hash": "eb57ccd5c546d649f24702ae5fe167bc",
+      "textRange": {
+        "startLine": 71,
+        "endLine": 71,
+        "startOffset": 108,
+        "endOffset": 109
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this multiplication operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "jpwsutton@gmail.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2017-10-06T10:42:08-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZrV_NB_WEcDEYxC",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 305,
+      "hash": "f28363027d81bfa3b554595865c47847",
+      "textRange": {
+        "startLine": 305,
+        "endLine": 305,
+        "startOffset": 2,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "jpwsutton@gmail.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2017-07-25T04:35:40-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaCC_NB_WEcDEZAu",
+      "rule": "java:S5783",
+      "severity": "CRITICAL",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java",
+      "project": "paho.mqtt.java",
+      "line": 429,
+      "hash": "80d5b17efc16ace990c07580fc3e85eb",
+      "textRange": {
+        "startLine": 429,
+        "endLine": 429,
+        "startOffset": 2,
+        "endOffset": 5
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java",
+              "textRange": {
+                "startLine": 430,
+                "endLine": 430,
+                "startOffset": 10,
+                "endOffset": 17
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java",
+              "textRange": {
+                "startLine": 431,
+                "endLine": 431,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor the body of this try/catch to not have multiple invocations throwing the same checked exception.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["junit", "tests"],
+      "creationDate": "2016-07-27T05:45:37-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "TEST"
+    },
+    {
+      "key": "AXzncZit_NB_WEcDEYqg",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketReceiver.java",
+      "project": "paho.mqtt.java",
+      "line": 87,
+      "hash": "f8f52a7d99beadbd84579638ccc8cb2a",
+      "textRange": {
+        "startLine": 87,
+        "endLine": 87,
+        "startOffset": 12,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2015-09-24T06:08:47-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYu7",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 222,
+      "hash": "a3ffc77f096600b20309949721db52b5",
+      "textRange": {
+        "startLine": 222,
+        "endLine": 222,
+        "startOffset": 12,
+        "endOffset": 24
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+              "textRange": {
+                "startLine": 181,
+                "endLine": 181,
+                "startOffset": 21,
+                "endOffset": 25
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "zhbinbj@cn.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2014-09-30T06:49:15-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqf_NB_WEcDEYwL",
+      "rule": "java:S2583",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 253,
+      "hash": "1f25c39ebb147a02be125fd9aac055a1",
+      "textRange": {
+        "startLine": 253,
+        "endLine": 253,
+        "startOffset": 10,
+        "endOffset": 15
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+              "textRange": {
+                "startLine": 253,
+                "endLine": 253,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Expression is always false."
+            },
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+              "textRange": {
+                "startLine": 243,
+                "endLine": 243,
+                "startOffset": 10,
+                "endOffset": 15
+              },
+              "msg": "Implies \u0027sent\u0027 is true."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Change this condition so that it does not always evaluate to \"false\"",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "asm@uk.ibm.com",
+      "tags": ["cert", "cwe", "pitfall", "suspicious", "unused"],
+      "creationDate": "2014-05-30T12:17:06-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaEF_NB_WEcDEZBD",
+      "rule": "java:S5783",
+      "severity": "CRITICAL",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+      "project": "paho.mqtt.java",
+      "line": 669,
+      "hash": "80d5b17efc16ace990c07580fc3e85eb",
+      "textRange": {
+        "startLine": 669,
+        "endLine": 669,
+        "startOffset": 3,
+        "endOffset": 6
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 670,
+                "endLine": 670,
+                "startOffset": 31,
+                "endOffset": 52
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 672,
+                "endLine": 672,
+                "startOffset": 30,
+                "endOffset": 37
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+              "textRange": {
+                "startLine": 673,
+                "endLine": 673,
+                "startOffset": 17,
+                "endOffset": 34
+              },
+              "msg": "Throws an exception"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Refactor the body of this try/catch to not have multiple invocations throwing the same checked exception.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "zhbinbj@cn.ibm.com",
+      "tags": ["junit", "tests"],
+      "creationDate": "2014-03-28T04:18:13-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "TEST"
+    },
+    {
+      "key": "AXzncaL1_NB_WEcDEZDU",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+      "project": "paho.mqtt.java",
+      "line": 208,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 208,
+        "endLine": 208,
+        "startOffset": 11,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaL1_NB_WEcDEZDW",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+      "project": "paho.mqtt.java",
+      "line": 221,
+      "hash": "a50e423de97896afb97123424a960664",
+      "textRange": {
+        "startLine": 221,
+        "endLine": 221,
+        "startOffset": 12,
+        "endOffset": 23
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+              "textRange": {
+                "startLine": 220,
+                "endLine": 220,
+                "startOffset": 13,
+                "endOffset": 17
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaL1_NB_WEcDEZDX",
+      "rule": "java:S2446",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+      "project": "paho.mqtt.java",
+      "line": 277,
+      "hash": "c4b299eae193c3c41effbcbb48e1ee15",
+      "textRange": {
+        "startLine": 277,
+        "endLine": 277,
+        "startOffset": 7,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"notify\" may not wake up the appropriate thread.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaMI_NB_WEcDEZEN",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "project": "paho.mqtt.java",
+      "line": 202,
+      "hash": "48c6ad5b59cb9060121ee362af21b5f9",
+      "textRange": {
+        "startLine": 202,
+        "endLine": 202,
+        "startOffset": 23,
+        "endOffset": 55
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"FileInputStream\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "cwe", "denial-of-service", "leak"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaMI_NB_WEcDEZDw",
+      "rule": "java:S2446",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "project": "paho.mqtt.java",
+      "line": 341,
+      "hash": "00c296c926df1b922e8e521614d7d2f2",
+      "textRange": {
+        "startLine": 341,
+        "endLine": 341,
+        "startOffset": 19,
+        "endOffset": 25
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"notify\" may not wake up the appropriate thread.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaMI_NB_WEcDEZEM",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "project": "paho.mqtt.java",
+      "line": 394,
+      "hash": "dda24ff7274ada0b7c2a4ec1be4d1ee1",
+      "textRange": {
+        "startLine": 394,
+        "endLine": 394,
+        "startOffset": 18,
+        "endOffset": 89
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"MqttDefaultFilePersistence\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "cwe", "denial-of-service", "leak"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaMI_NB_WEcDEZD5",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "project": "paho.mqtt.java",
+      "line": 613,
+      "hash": "7651cd71c493decb50332fa6d78695ee",
+      "textRange": {
+        "startLine": 613,
+        "endLine": 613,
+        "startOffset": 22,
+        "endOffset": 46
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaMI_NB_WEcDEZD4",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "project": "paho.mqtt.java",
+      "line": 637,
+      "hash": "792905801f3c90d0af12d2f74663b7f0",
+      "textRange": {
+        "startLine": 637,
+        "endLine": 637,
+        "startOffset": 14,
+        "endOffset": 26
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+              "textRange": {
+                "startLine": 611,
+                "endLine": 611,
+                "startOffset": 31,
+                "endOffset": 35
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaL-_NB_WEcDEZDd",
+      "rule": "java:S2446",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+      "project": "paho.mqtt.java",
+      "line": 119,
+      "hash": "c0028383804718540d27cc458a3a9275",
+      "textRange": {
+        "startLine": 119,
+        "endLine": 119,
+        "startOffset": 15,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"notify\" may not wake up the appropriate thread.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaL-_NB_WEcDEZDe",
+      "rule": "java:S2446",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+      "project": "paho.mqtt.java",
+      "line": 137,
+      "hash": "c0028383804718540d27cc458a3a9275",
+      "textRange": {
+        "startLine": 137,
+        "endLine": 137,
+        "startOffset": 16,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"notify\" may not wake up the appropriate thread.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaL-_NB_WEcDEZDf",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+      "project": "paho.mqtt.java",
+      "line": 173,
+      "hash": "a50e423de97896afb97123424a960664",
+      "textRange": {
+        "startLine": 173,
+        "endLine": 173,
+        "startOffset": 11,
+        "endOffset": 22
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+              "textRange": {
+                "startLine": 168,
+                "endLine": 168,
+                "startOffset": 17,
+                "endOffset": 21
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+              "textRange": {
+                "startLine": 172,
+                "endLine": 172,
+                "startOffset": 23,
+                "endOffset": 28
+              },
+              "msg": "Method invocation throwing InterruptedException."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaLV_NB_WEcDEZC4",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+      "project": "paho.mqtt.java",
+      "line": 258,
+      "hash": "e590f40558782c35c78f2ca429f2d12b",
+      "textRange": {
+        "startLine": 258,
+        "endLine": 258,
+        "startOffset": 32,
+        "endOffset": 62
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"FileInputStream\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert", "cwe", "denial-of-service", "leak"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncaLV_NB_WEcDEZC1",
+      "rule": "java:S2674",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+      "project": "paho.mqtt.java",
+      "line": 259,
+      "hash": "96cd78c28dc2bc146655ba6502b23eb1",
+      "textRange": {
+        "startLine": 259,
+        "endLine": 259,
+        "startOffset": 14,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Check the return value of the \"read\" call to see how many bytes were read.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "icraggs@uk.ibm.com",
+      "tags": ["cert"],
+      "creationDate": "2013-08-01T08:57:39-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZmJ_NB_WEcDEYs1",
+      "rule": "java:S3077",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 116,
+      "hash": "646483877832b6c53da37eca1fd32b9b",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 1,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a thread-safe type; adding \"volatile\" is not enough to make this field thread-safe.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZmJ_NB_WEcDEYs2",
+      "rule": "java:S3077",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 117,
+      "hash": "d7b50af3e9dcbc78156eb1baef3842c2",
+      "textRange": {
+        "startLine": 117,
+        "endLine": 117,
+        "startOffset": 1,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use a thread-safe type; adding \"volatile\" is not enough to make this field thread-safe.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYvF",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 365,
+      "hash": "f8f52a7d99beadbd84579638ccc8cb2a",
+      "textRange": {
+        "startLine": 365,
+        "endLine": 365,
+        "startOffset": 14,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpc_NB_WEcDEYvi",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/FileLock.java",
+      "project": "paho.mqtt.java",
+      "line": 91,
+      "hash": "1e7b7369e5225b3a260896b9e167c2a8",
+      "textRange": {
+        "startLine": 91,
+        "endLine": 91,
+        "startOffset": 3,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqf_NB_WEcDEYv_",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 147,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 147,
+        "endLine": 147,
+        "startOffset": 14,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqf_NB_WEcDEYwF",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 249,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 249,
+        "endLine": 249,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZqf_NB_WEcDEYwI",
+      "rule": "java:S1751",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "project": "paho.mqtt.java",
+      "line": 257,
+      "hash": "50859f1ca6aecb592f26b03ac2f63d79",
+      "textRange": {
+        "startLine": 257,
+        "endLine": 257,
+        "startOffset": 4,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this \"throw\" statement or make it conditional.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "locke@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2013-02-28T11:59:58-0500",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZvh_NB_WEcDEYyx",
+      "rule": "java:S3551",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/MqttException.java",
+      "project": "paho.mqtt.java",
+      "line": 216,
+      "hash": "6605b5f90b998371a3ee2368f45bb47d",
+      "textRange": {
+        "startLine": 216,
+        "endLine": 216,
+        "startOffset": 18,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make this method \"synchronized\" to match the parent class implementation.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "multi-threading"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZmK_NB_WEcDEYtf",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 837,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 837,
+        "endLine": 837,
+        "startOffset": 14,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZmK_NB_WEcDEYt4",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "project": "paho.mqtt.java",
+      "line": 1361,
+      "hash": "05037f06845fdaa0444928d9edb48da8",
+      "textRange": {
+        "startLine": 1361,
+        "endLine": 1361,
+        "startOffset": 11,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZpF_NB_WEcDEYu8",
+      "rule": "java:S2142",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "project": "paho.mqtt.java",
+      "line": 184,
+      "hash": "eb375774c265dedeefeb29283ceea9bc",
+      "textRange": {
+        "startLine": 184,
+        "endLine": 184,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Either re-interrupt this method or rethrow the \"InterruptedException\" that can be caught here.",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cwe", "error-handling", "multi-threading"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZhU_NB_WEcDEYp-",
+      "rule": "java:S1872",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "project": "paho.mqtt.java",
+      "line": 35,
+      "hash": "243ce32bffa32b9f03bdf09138c6b933",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 6,
+        "endOffset": 81
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use an \"instanceof\" comparison instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZoy_NB_WEcDEYut",
+      "rule": "java:S2259",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java",
+      "project": "paho.mqtt.java",
+      "line": 42,
+      "hash": "9eb0c68e321744cbe53058cd4bf8296b",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 9,
+        "endOffset": 37
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java",
+              "textRange": {
+                "startLine": 42,
+                "endLine": 42,
+                "startOffset": 9,
+                "endOffset": 37
+              },
+              "msg": "\u0027INSTANCE\u0027 is dereferenced."
+            },
+            {
+              "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java",
+              "textRange": {
+                "startLine": 25,
+                "endLine": 25,
+                "startOffset": 6,
+                "endOffset": 22
+              },
+              "msg": "Implies \u0027INSTANCE\u0027 can be null."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "A \"NullPointerException\" could be thrown; \"INSTANCE\" is nullable here.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZju_NB_WEcDEYrB",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 113,
+      "hash": "25ee879e58fc758cb223f1a0bb3de369",
+      "textRange": {
+        "startLine": 113,
+        "endLine": 113,
+        "startOffset": 9,
+        "endOffset": 10
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZju_NB_WEcDEYrC",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 116,
+      "hash": "b95782f829062ae934a3e2b380fe9093",
+      "textRange": {
+        "startLine": 116,
+        "endLine": 116,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZju_NB_WEcDEYrD",
+      "rule": "java:S2184",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java",
+      "project": "paho.mqtt.java",
+      "line": 119,
+      "hash": "256b759e74ee203350056d347d1d35ad",
+      "textRange": {
+        "startLine": 119,
+        "endLine": 119,
+        "startOffset": 10,
+        "endOffset": 11
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Cast one of the operands of this subtraction operation to a \"long\".",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "overflow", "sans-top25-risky"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZrV_NB_WEcDEYww",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 153,
+      "hash": "f28363027d81bfa3b554595865c47847",
+      "textRange": {
+        "startLine": 153,
+        "endLine": 153,
+        "startOffset": 4,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzncZrV_NB_WEcDEYwy",
+      "rule": "java:S899",
+      "severity": "MINOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "project": "paho.mqtt.java",
+      "line": 174,
+      "hash": "7a336682c6cd8774d90ec3bd71cce88b",
+      "textRange": {
+        "startLine": 174,
+        "endLine": 174,
+        "startOffset": 4,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do something with the \"boolean\" value returned by \"delete\".",
+      "effort": "15min",
+      "debt": "15min",
+      "author": "locke@uk.ibm.com",
+      "tags": ["cert", "cwe", "error-handling"],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T16:14:52-0400",
+      "type": "BUG",
+      "scope": "MAIN"
+    }
+  ],
+  "components": [
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ExceptionHelper.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "LED.java",
+      "longName": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java",
+      "path": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/LED.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MQTTFrame.java",
+      "longName": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java",
+      "path": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTFrame.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Token.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/Token.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/DisconnectedMessageBuffer.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "DisconnectedMessageBuffer.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/DisconnectedMessageBuffer.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/DisconnectedMessageBuffer.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ClientState.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ClientState.java"
+    },
+    {
+      "key": "paho.mqtt.java",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "Eclipse Paho",
+      "longName": "Eclipse Paho"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MessageCatalog.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/MessageCatalog.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MQTTHist.java",
+      "longName": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java",
+      "path": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/MQTTHist.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/websocket/WebSocketReceiver.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "WebSocketReceiver.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/websocket/WebSocketReceiver.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/websocket/WebSocketReceiver.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsSender.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsSender.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "SimpleBase64Encoder.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/security/SimpleBase64Encoder.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttDefaultFilePersistence.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/persist/MqttDefaultFilePersistence.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/MqttException.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttException.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/MqttException.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/MqttException.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "PubPanel.java",
+      "longName": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java",
+      "path": "org.eclipse.paho.sample.utility/src/main/java/org/eclipse/paho/sample/utility/PubPanel.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ExceptionHelper.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsReceiver.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsReceiver.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketReceiver.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "WebSocketReceiver.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketReceiver.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketReceiver.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ClientState.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ClientState.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "SendReceiveAsyncTest.java",
+      "longName": "org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java",
+      "path": "org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/SendReceiveAsyncTest.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "OfflineBufferingTest.java",
+      "longName": "org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java",
+      "path": "org.eclipse.paho.mqttv5.client.test/src/test/java/org/eclipse/paho/mqttv5/client/test/automaticReconnect/OfflineBufferingTest.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "SimpleBase64Encoder.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Encoder.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/package-info.html",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "package-info.html",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/package-info.html",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/package-info.html"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "SendReceiveAsyncTest.java",
+      "longName": "org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java",
+      "path": "org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/SendReceiveAsyncTest.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TCPNetworkModule.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MessageCatalog.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/MqttException.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttException.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/MqttException.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/MqttException.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttAsyncClient.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/MqttAsyncClient.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Token.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/Token.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "DisconnectedMessageBuffer.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffer.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsReceiver.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/FileLock.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "FileLock.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/FileLock.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/FileLock.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/FileLock.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "FileLock.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/FileLock.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/FileLock.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsCallback.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsCallback.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "OfflineBufferingTest.java",
+      "longName": "org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java",
+      "path": "org.eclipse.paho.client.mqttv3.test/src/test/java/org/eclipse/paho/client/mqttv3/test/automaticReconnect/OfflineBufferingTest.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/packet/MqttDataTypes.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttDataTypes.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/packet/MqttDataTypes.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/packet/MqttDataTypes.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MqttDefaultFilePersistence.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistence.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/TCPNetworkModule.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TCPNetworkModule.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/TCPNetworkModule.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/TCPNetworkModule.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsCallback.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/CommsCallback.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CommsSender.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/CommsSender.java"
+    }
+  ],
+  "facets": []
+}

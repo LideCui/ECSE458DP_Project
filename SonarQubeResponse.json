@@ -1,0 +1,189 @@
+{
+  "total": 5,
+  "p": 1,
+  "ps": 100,
+  "paging": { "pageIndex": 1, "pageSize": 100, "total": 5 },
+  "effortTotal": 225,
+  "issues": [
+    {
+      "key": "AXzo9vp6_NB_WEcDEbl1",
+      "rule": "java:S2658",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "project": "paho.mqtt.java",
+      "line": 52,
+      "hash": "abec4a14f180bb19f0d6358bf7476c3a",
+      "textRange": {
+        "startLine": 52,
+        "endLine": 52,
+        "startOffset": 9,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of dynamic class loading.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T23:20:01-0400",
+      "type": "VULNERABILITY",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzo9vtz_NB_WEcDEbl2",
+      "rule": "java:S2658",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/logging/LoggerFactory.java",
+      "project": "paho.mqtt.java",
+      "line": 97,
+      "hash": "5a783303d4f60a09672bf58930d9819e",
+      "textRange": {
+        "startLine": 97,
+        "endLine": 97,
+        "startOffset": 20,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of dynamic class loading.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T23:20:01-0400",
+      "type": "VULNERABILITY",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzo9v1t_NB_WEcDEbl3",
+      "rule": "java:S2658",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/ExceptionHelper.java",
+      "project": "paho.mqtt.java",
+      "line": 43,
+      "hash": "abec4a14f180bb19f0d6358bf7476c3a",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 9,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of dynamic class loading.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "james.sutton@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2018-01-12T10:08:25-0500",
+      "updateDate": "2021-11-03T23:20:01-0400",
+      "type": "VULNERABILITY",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzo9vkq_NB_WEcDEbl0",
+      "rule": "java:S2658",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/LoggerFactory.java",
+      "project": "paho.mqtt.java",
+      "line": 97,
+      "hash": "5a783303d4f60a09672bf58930d9819e",
+      "textRange": {
+        "startLine": 97,
+        "endLine": 97,
+        "startOffset": 20,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of dynamic class loading.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "asm@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2014-06-02T05:59:33-0400",
+      "updateDate": "2021-11-03T23:20:01-0400",
+      "type": "VULNERABILITY",
+      "scope": "MAIN"
+    },
+    {
+      "key": "AXzo9vY8_NB_WEcDEblz",
+      "rule": "java:S2658",
+      "severity": "MAJOR",
+      "component": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "project": "paho.mqtt.java",
+      "line": 51,
+      "hash": "abec4a14f180bb19f0d6358bf7476c3a",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 9,
+        "endOffset": 16
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this use of dynamic class loading.",
+      "effort": "45min",
+      "debt": "45min",
+      "author": "locke@uk.ibm.com",
+      "tags": [],
+      "creationDate": "2012-03-26T17:14:14-0400",
+      "updateDate": "2021-11-03T23:20:01-0400",
+      "type": "VULNERABILITY",
+      "scope": "MAIN"
+    }
+  ],
+  "components": [
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/LoggerFactory.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "LoggerFactory.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/LoggerFactory.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/logging/LoggerFactory.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ExceptionHelper.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/internal/ExceptionHelper.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/logging/LoggerFactory.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "LoggerFactory.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/logging/LoggerFactory.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/client/logging/LoggerFactory.java"
+    },
+    {
+      "key": "paho.mqtt.java",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "Eclipse Paho",
+      "longName": "Eclipse Paho"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ExceptionHelper.java",
+      "longName": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java",
+      "path": "org.eclipse.paho.client.mqttv3/src/main/java/org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java"
+    },
+    {
+      "key": "paho.mqtt.java:org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/ExceptionHelper.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "ExceptionHelper.java",
+      "longName": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/ExceptionHelper.java",
+      "path": "org.eclipse.paho.mqttv5.client/src/main/java/org/eclipse/paho/mqttv5/common/ExceptionHelper.java"
+    }
+  ],
+  "facets": []
+}
