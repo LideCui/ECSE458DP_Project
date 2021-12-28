@@ -1,7 +1,7 @@
 # run infer by infer.py
 import sys
 import subprocess
-from git import GitHub
+from github import Github
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -12,6 +12,7 @@ def parseInputToPath(args):
 
 def getGitReleases(args):
     # Put your GitHub token here
+
     G = Github("")  
     repo = G.get_repo("eclipse/paho.mqtt.java")
     releases = repo.get_releases()
@@ -19,8 +20,8 @@ def getGitReleases(args):
         print(release)
 
 if __name__ == '__main__':
-    changeDirectory = "cd ./paho.mqtt.java"
-    path = parseInputToPath(sys.argv)
+    # changeDirectory = "cd ./paho.mqtt.java"
+    # path = parseInputToPath(sys.argv)
     """
     print(sys.argv)
     runInfer="infer analyze -- mvn verify -DskipTests"
