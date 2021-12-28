@@ -1,7 +1,7 @@
 # run infer by infer.py
 import sys
 import subprocess
-from git import GitHub
+from github import Github
 
 def printf(format, *args):
     sys.stdout.write(format % args)
