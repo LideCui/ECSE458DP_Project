@@ -17,7 +17,7 @@ def parseInputToPath(args):
 
 def getGitReleases(project, token):
     # Put your GitHub token here
-    G = Github(token)  # Zichen's token 
+    G = Github(token)
     repo = G.get_repo(project)
     releases = repo.get_releases()
     for release in releases:
