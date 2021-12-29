@@ -11,7 +11,7 @@ pin = ''
 projectKey = ''
 types = ''
 
-if __name__ == '__main__':  
+def sonar_analyze():
     login = input("Your Sonar Login: ")
     pin = input("Your Sonar pin: ")
     projectKey = input("Your target project: ")
@@ -24,8 +24,12 @@ if __name__ == '__main__':
         
         data = json.loads(r.text)   # response text body is already a json, just load it
         print(data)
+        
+        # Document:
+        #
         # r = requests.get('http://localhost:9000/api/issues/search?componentKeys=Eclipse-Ditto&types=VULNERABILITY',
         #                 auth=HTTPBasicAuth('admin', 'changzichen251'))
+        
     except:
         sys.exit("Connection could not be established") 
 
@@ -34,3 +38,8 @@ if __name__ == '__main__':
     with open('data.json', 'w') as f:
         json.dump(data, f, indent=4)
     print('...Done')
+
+
+
+if __name__ == '__main__':  
+    sonar_analyze()
