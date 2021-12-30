@@ -74,7 +74,7 @@ for issue in res_sonar:
 
 # Step 3. insert data into db
 result = col.insert_many(data)
-cursor = col.find()
+cursor = col.find({'serverity' : 'MAJOR'})
 
 for item in cursor:
     print(item)
