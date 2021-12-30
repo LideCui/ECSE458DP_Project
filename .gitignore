@@ -1,7 +1,11 @@
 ./paho.mqtt.java
+ditto
 
 test.json
 test.py
 
 ./data/*
 ./venv
+
+work_space
+infer-out

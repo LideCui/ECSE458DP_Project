@@ -4,6 +4,9 @@ import subprocess
 import os
 from github import Github
 
+import infer
+import sonar
+
 
 git_project = ''        # target project on github
 user_token = ''         # git authority
@@ -25,21 +28,25 @@ def getGitReleases(project, token):
 
 
 if __name__ == '__main__':
-    # first read in user info
+    # 1. read in the user basic info ---------------------------------------------------------
     git_project = input("Target git project: (eg. eclipse/ditto)")
     user_token = input("Your github access token: ")
     getGitReleases(git_project, user_token)
     chosen_release = input("Input release to be analyzed: ")
     print(chosen_release)
-    change_directory = input("What is your directory: ")
+    change_directory = input("Where is your project: ")
     print(change_directory)
-    
     
     # move to the directory and change the tags
     os.chdir(change_directory)
     os.system("git checkout tags/"+chosen_release)
     
-    # after some manipulation -----------------------------------
-    # os.system("git checkout master")
 
+    # 2. Analyze the project with infer and sonar -----------------------------------
+    sonar.sonar_analyze()
+    infer.infer_analyze()
+
+    # 3. Store in the DB ------------------------------------------------------------
+
+    os.system("git checkout master")
     sys.exit()

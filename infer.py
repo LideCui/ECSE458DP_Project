@@ -2,6 +2,7 @@
 import sys
 import subprocess
 from github import Github
+import os
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -19,13 +20,17 @@ def getGitReleases(args):
     for release in releases:
         print(release)
 
-if __name__ == '__main__':
+def infer_analyze():
     # changeDirectory = "cd ./paho.mqtt.java"
     # path = parseInputToPath(sys.argv)
-    """
-    print(sys.argv)
-    runInfer="infer analyze -- mvn verify -DskipTests"
-    subprocess.call(runInfer.split(), cwd=path)
-    """
-    getGitReleases(sys.argv)
-    sys.exit()
+    path = input("Input your infer target path: ")
+    os.chdir(path)
+
+    runInfer="infer run -- mvn compile -Dlicense.skip=true"
+    # subprocess.call(runInfer.split(), cwd=path)
+    os.system(runInfer)
+
+    # getGitReleases(sys.argv)
+
+if __name__ == '__main__':
+    infer_analyze()
