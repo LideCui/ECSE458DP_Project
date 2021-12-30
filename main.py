@@ -28,7 +28,7 @@ def getGitReleases(project, token):
 
 
 if __name__ == '__main__':
-    # first read in user info
+    # 1. read in the user basic info ---------------------------------------------------------
     git_project = input("Target git project: (eg. eclipse/ditto)")
     user_token = input("Your github access token: ")
     getGitReleases(git_project, user_token)
@@ -42,11 +42,11 @@ if __name__ == '__main__':
     os.system("git checkout tags/"+chosen_release)
     
 
-    # after some manipulation -----------------------------------
-    # os.system("git checkout master")
+    # 2. Analyze the project with infer and sonar -----------------------------------
     sonar.sonar_analyze()
+    infer.infer_analyze()
 
-    # Store in DB
+    # 3. Store in the DB ------------------------------------------------------------
 
     os.system("git checkout master")
     sys.exit()

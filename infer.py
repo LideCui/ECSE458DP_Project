@@ -23,10 +23,10 @@ def getGitReleases(args):
 def infer_analyze():
     # changeDirectory = "cd ./paho.mqtt.java"
     # path = parseInputToPath(sys.argv)
-    path = input("Input your infer target path")
+    path = input("Input your infer target path: ")
     os.chdir(path)
 
-    runInfer="infer analyze -- mvn verify -DskipTests"
+    runInfer="infer run -- mvn compile -Dlicense.skip=true"
     # subprocess.call(runInfer.split(), cwd=path)
     os.system(runInfer)
 
