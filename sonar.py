@@ -35,7 +35,7 @@ def sonar_analyze():
 
     print('Writing to the data.json...')
     # output the json file of the response
-    with open('data.json', 'w') as f:
+    with open('output/data.json', 'w') as f:
         json.dump(data, f, indent=4)
     print('...Done')
 

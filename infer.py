@@ -26,7 +26,7 @@ def infer_analyze():
     path = input("Input your infer target path: ")
     os.chdir(path)
 
-    runInfer="infer run -- mvn compile -Dlicense.skip=true"
+    runInfer="infer run -o /output -- mvn compile -DskipTests -Dlicense.skip=true"
     # subprocess.call(runInfer.split(), cwd=path)
     os.system(runInfer)
 
