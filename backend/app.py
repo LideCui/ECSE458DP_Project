@@ -10,6 +10,10 @@ def hello_world():
     result = data_processing.filter({},col)
     return result
 
+@app.route('/hello')
+def hello():
+    return 'Hello, World'
+
 def connectDB():
     CONNECTION_STRING = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000"
     client = MongoClient(CONNECTION_STRING)

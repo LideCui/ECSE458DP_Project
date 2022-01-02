@@ -1,6 +1,10 @@
 <template>
   <div id="app">
+    <!-- Comment 
+    
     <img src="./assets/logo.png">
+    
+    -->
     <router-view></router-view>
   </div>
 </template>
