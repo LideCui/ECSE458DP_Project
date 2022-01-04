@@ -2,9 +2,13 @@
 import sys
 import subprocess
 from github import Github
+<<<<<<< HEAD
 from pymongo import MongoClient
 import json
 import uuid
+=======
+import os
+>>>>>>> a1ec759b2da2d438f7b36411f0d45d312690b3a5
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -15,12 +19,14 @@ def parseInputToPath(args):
 
 def getGitReleases(args):
     # Put your GitHub token here
+
     G = Github("")  
     repo = G.get_repo("eclipse/paho.mqtt.java")
     releases = repo.get_releases()
     for release in releases:
         print(release)
 
+<<<<<<< HEAD
 def write2DB(file):
     # Step 1. connect to MongoDB, and add a new database called "vurlnerability"
     CONNECTION_STRING = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000"
@@ -62,14 +68,19 @@ def write2DB(file):
 
     for item in cursor:
         print(item)
+=======
+def infer_analyze():
+    # changeDirectory = "cd ./paho.mqtt.java"
+    # path = parseInputToPath(sys.argv)
+    path = input("Input your infer target path: ")
+    os.chdir(path)
+
+    runInfer="infer run -- mvn compile -Dlicense.skip=true"
+    # subprocess.call(runInfer.split(), cwd=path)
+    os.system(runInfer)
+
+    # getGitReleases(sys.argv)
+>>>>>>> a1ec759b2da2d438f7b36411f0d45d312690b3a5
 
 if __name__ == '__main__':
-    changeDirectory = "cd ./paho.mqtt.java"
-    path = parseInputToPath(sys.argv)
-    """
-    print(sys.argv)
-    runInfer="infer analyze -- mvn verify -DskipTests"
-    subprocess.call(runInfer.split(), cwd=path)
-    """
-    getGitReleases(sys.argv)
-    sys.exit()
+    infer_analyze()
