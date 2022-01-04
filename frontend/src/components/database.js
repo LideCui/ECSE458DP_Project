@@ -7,13 +7,13 @@ import axios from 'axios'
 var config = require('../../config')
 
 var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
-// var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
+//var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
 
 var backendUrl = 'http://127.0.0.1:5000';
 
 var AXIOS = axios.create({
   baseURL: backendUrl,
-  //headers: { 'Access-Control-Allow-Origin': frontendUrl }
+  headers: { 'Access-Control-Allow-Origin': frontendUrl }
 })
 
 export default{
