@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request
 from pymongo import MongoClient
 import data_processing
 
@@ -13,6 +13,15 @@ def hello_world():
 @app.route('/hello')
 def hello():
     return 'Hello, World'
+
+@app.route('/project',methods=['post'])
+def add_stu():
+    if  not request.query_string:  
+        return ('fail')
+    address = request.query_string
+    return(address)
+
+
 
 def connectDB():
     CONNECTION_STRING = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000"
