@@ -1,9 +1,9 @@
 # run infer by infer.py
 import sys
-import subprocess
 import requests
 import json
 from requests.auth import HTTPBasicAuth
+import os
 
 # local credentials
 login = ''
@@ -35,8 +35,13 @@ def sonar_analyze():
 
     print('Writing to the data.json...')
     # output the json file of the response
-    with open('data.json', 'w') as f:
+
+    filename = "./output/sonar_report.json"
+    with open(filename, "w") as f:
         json.dump(data, f, indent=4)
+        
+    # with open('data.json', 'w') as f:
+    #     json.dump(data, f, indent=4)
     print('...Done')
 
 

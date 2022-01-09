@@ -2,12 +2,10 @@
 import sys
 import subprocess
 from github import Github
-
-import os
-
 from pymongo import MongoClient
 import json
 import uuid
+import os
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -74,7 +72,6 @@ def write2DB(file):
     # Step 3. insert data into db
     result = col.insert_many(data)
     cursor = col.find()
-
     for item in cursor:
         print(item)
 

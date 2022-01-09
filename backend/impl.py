@@ -5,7 +5,7 @@ import os
 from github import Github
 
 import infer
-import sonar
+import sonar as sonar
 
 
 git_project = ''        # target project on github
@@ -25,11 +25,13 @@ def getGitReleases(project, token):
     releases = repo.get_releases()
     for release in releases:
         print(release)
+    return releases
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+def func():
     # 1. read in the user basic info ---------------------------------------------------------
-    git_project = input("Target git project: (eg. eclipse/ditto)")
+    git_project = input("Target git project: (eg. eclipse/ditto): ")
     user_token = input("Your github access token: ")
     getGitReleases(git_project, user_token)
     chosen_release = input("Input release to be analyzed: ")
@@ -38,6 +40,7 @@ if __name__ == '__main__':
     print(change_directory)
     
     # move to the directory and change the tags
+    change_directory = '../'+change_directory
     os.chdir(change_directory)
     os.system("git checkout tags/"+chosen_release)
     
