@@ -3,7 +3,7 @@
     <h1>SoftVali</h1>
     <ul>
       <li><a href="http://localhost:8080/#/main" target="_blank">Database</a></li>
-      <li><a href="http://localhost:8080/#/sa" target="_blank">Static Analyser</a></li>
+      <li><a href="http://localhost:8080/#/static" target="_blank">Static Analyser</a></li>
     </ul>
 
     <h2>Members</h2>
