@@ -2,7 +2,12 @@
 import sys
 import subprocess
 from github import Github
+
 import os
+
+from pymongo import MongoClient
+import json
+import uuid
 
 def printf(format, *args):
     sys.stdout.write(format % args)
@@ -31,6 +36,47 @@ def infer_analyze():
     os.system(runInfer)
 
     # getGitReleases(sys.argv)
+def write2DB(file):
+    # Step 1. connect to MongoDB, and add a new database called "vurlnerability"
+    CONNECTION_STRING = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000"
+    client = MongoClient(CONNECTION_STRING)
+    db= client.issues
+    col = db.issues # infer, sonar
+
+    # Step 2. clean given data
+    data = []
+
+    ## handle infer
+    with open(file) as read_file:
+        res_infer = json.loads(read_file.read())
+
+    for issue in res_infer:
+        data_template = {
+            '_id': 0,
+            'bug_type': "",
+            'description': "",
+            'serverity': "",
+            'line': -1,
+            'file': "",
+        # customized parameters
+            'release_version': "XX.XX.XX",
+            'false_alarm': False,
+            'source': "Infer",
+        }
+        data_template['_id'] = str(uuid.uuid4())
+        data_template['bug_type'] = issue['bug_type']
+        data_template['description'] = issue["qualifier"]
+        data_template['serverity'] = issue["severity"]
+        data_template['line'] = issue["line"]
+        data_template['file'] = issue["file"]
+        data.append(data_template)
+
+    # Step 3. insert data into db
+    result = col.insert_many(data)
+    cursor = col.find()
+
+    for item in cursor:
+        print(item)
 
 if __name__ == '__main__':
     infer_analyze()
