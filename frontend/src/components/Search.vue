@@ -1,5 +1,5 @@
 <template>
-    <div id="main">
+    <div id="main_search">
         <h2>Search</h2>
         <ul>
         <a href="http://localhost:8080/#/" target="_blank">SoftVali</a>
@@ -20,20 +20,16 @@
     </div>
 </template>
 
-<script src="./static.js">
+<script src="./search.js">
 
 </script>
 
 <style scoped>
-  #main {
+  #main_search {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     color: #2c3e50;
     background: #ffffff;
 
-  }
-
-  #search_bar {
-   
   }
 
    #address {

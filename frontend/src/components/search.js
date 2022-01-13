@@ -28,9 +28,6 @@ export default{
         }
     },
     methods:{
-        sendAddress: function(address){
-            this.errorAddress = 'C/Document/ECSE4556/EEE'
-            AXIOS.post().then({}).catch({})
-        }
+  
     }
 }

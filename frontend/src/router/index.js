@@ -4,7 +4,7 @@ import Hello from '@/components/Hello'
 import Main from '@/components/Main'
 import SA from '@/components/SA'
 import Table from '@/components/Table'
-import Search from '@/components/Search'
+import Search from '@/components/Search.vue'
 
 Vue.use(Router)
 
