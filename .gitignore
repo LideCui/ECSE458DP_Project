@@ -4,7 +4,7 @@ ditto
 test.json
 test.py
 
-./data/*
+data/*
 ./venv
 
 work_space
