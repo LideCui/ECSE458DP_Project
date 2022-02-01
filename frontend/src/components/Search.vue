@@ -5,17 +5,38 @@
         <a href="http://localhost:8080/#/" target="_blank">SoftVali</a>
         </ul>
         <div id = "search_bar">
-        <input id="address" type="text" v-model="address" placeholder="Project URL">
-        <button id="send_address" v-bind:disabled="!address" v-on:click="sendAddress(address)">Send</button>
+        <input id="address" type="text" v-model="address" placeholder="Project Address">
+        <br>
+        <input id="token" type="text" v-model="token" placeholder="User token">
+        <br>
+        <p>
+            Address: {{address}}
+            <br>
+            Token: {{token}}
+        </p>
+
+        <button id="send_address" v-bind:disabled="!address" v-on:click="getReleases(address,token)">Get releases</button>
         </div>
         
         <p>
-           Available release version:  
+           Available release version:  {{releases}}
+           <br>
+           Error message: {{errorReleases}}
+           <br>
+           Connection: {{testConnection}}
         </p>
 
         <div id = "search_bar2">
-        <input id="release" type="text" v-model="release" placeholder="Release Version">
-        <button id="send_release" v-bind:disabled="!release" v-on:click="sendRelease(address)">Send</button>
+       
+        <select id='release' v-model="chosenRelease">
+            <option disabled value="">Please select release</option>
+            <option v-for="(release, i) in releases" v-bind:key="`release-${i}`">{{releases[i]}}</option>
+        </select>
+        <br>
+        <p>
+            Chosen release: {{chosenRelease}}
+        </p>
+        <button id="send_release" v-bind:disabled="!chosenRelease" v-on:click="sendRelease(release)">Send</button>
         </div>
     </div>
 </template>
@@ -33,6 +54,10 @@
   }
 
    #address {
+       width: 50%
+   }
+
+   #token {
        width: 50%
    }
 

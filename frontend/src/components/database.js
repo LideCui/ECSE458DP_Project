@@ -1,7 +1,7 @@
 import axios from 'axios'
 //import * as AxiosLogger from 'axios-logger';
 
-
+// for main.vue
 
 
 var config = require('../../config')

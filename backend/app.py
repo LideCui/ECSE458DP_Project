@@ -41,7 +41,11 @@ def getRelease():
         data = request.json # a multidict containing POST data
         print(data)
         releases = impl.getGitReleases(data["gitProject"], data["userToken"])
-        return jsonify(releases)
+        list = []
+        for value in releases:
+            list.append(str(value)[10:])
+
+        return json.dumps(list)
 
 @app.route('/process/<chosenRelease>/<changeDirectory>')
 def process(chosenRelease, changeDirectory):

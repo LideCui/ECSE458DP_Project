@@ -22,6 +22,9 @@ export default{
     data () {
         return {
             address:'',
+            token:'',
+            releases:[],
+            chosenRelease:'',
             errorAddress:''
         }
     },

@@ -22,12 +22,48 @@ export default{
     data () {
         return {
             address:'',
+            token:'',
+            releases:[],
+            output:'',
+            chosenRelease:'',
             errorAddress:'',
-            release:''
-
+            requestBody: {
+                gitProject: '',
+ 	            userToken: ''
+            },
+            errorReleases: '',
+            testConnection:''
         }
     },
+
+    created: function(){
+        AXIOS.get('/hello')
+        .then(response => {this.testConnection = response.data})
+        .catch(e => {this.errorVuln = e});
+    },
+
     methods:{
-  
+        getReleases: function(address, token){
+            this.requestBody.gitProject = address;
+            this.requestBody.userToken = token;
+
+            AXIOS.post('/getRelease', this.requestBody)
+                .then(response => {
+                this.releases = response.data;
+                this.output = response.data;
+
+            })
+            .catch(e => {
+                e = e.response.data.message ? e.response.data.message : e;
+                this.errorReleases = e;
+                console.log(e);
+            });
+
+        },
+
+        sendRelease: function(chosenRelease){
+           
+            //AXIOS.post().then({}).catch({})
+        }
     }
 }
