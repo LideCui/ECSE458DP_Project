@@ -6,6 +6,8 @@ test.py
 
 data/*
 ./venv
+.idea
+**.DS_Store
 
 work_space
 infer-out
