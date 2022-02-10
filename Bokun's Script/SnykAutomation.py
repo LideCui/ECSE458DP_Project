@@ -4,8 +4,13 @@ import json
 import copy
 from builtins import print
 
-project_url = "https://github.com/eclipse/leshan.git"
-project_name = "leshan"
+project_url = "https://github.com/eclipse/ditto.git"  # the web URL
+project_name = "ditto"  # the cloned folder name
+
+
+def plot_graph ():
+    # TODO: implement this feature
+    return
 
 
 # Read in content of json report, return two lists of dictionaries. each dictionary is an issue
@@ -84,7 +89,8 @@ def init():
     os.system("git pull --ff-only")
     os.system("git config --global advice.detachedHead false")
     print("Current directory: " + subprocess.check_output(["pwd"]).decode("utf-8"))
-    list_files = subprocess.check_output(["git", "tag", "--sort=creatordate"])  # store CLI stdout into variable "list_files"
+    # store CLI stdout into variable "list_files"
+    list_files = subprocess.check_output(["git", "tag", "--sort=creatordate"])
     all_versions = list_files.decode("utf-8").strip("\n").split("\n")
     print("No. of versions: " + str(len(all_versions)))
     return all_versions
@@ -93,17 +99,15 @@ def init():
 if __name__ == '__main__':
 
     # Initialization
-    print("cp " + project_name + "/SnykOut.json " + project_name + "versionReports/" + "leshan-1.0.0-M7" + ".json")
-    # exit(0)
     versions = init()
     print(versions)
     count = len(versions)
-    print(count)
+    print("total no. of releases (tags): " + str(count))
     print("\n============================initialization complete!=============================\n")
-    exit(0)
+    input("press enter to continue:")
 
     # Analysis
-    for i in range(0, 44):  # "leshan-1.0.0-M7 " is at index 26, "leshan-1.3.1" at index 36, 38-43 are M1-M6
+    for i in range(0, count):
         snyk_analysis(versions, i)
     print("\n===============================Analysis finished!!===============================\n")
 
@@ -114,5 +118,5 @@ if __name__ == '__main__':
     # where the <dict> object contains the issue itself
     track_lifecycle = dict()
     prev_issue_count = 0
-    for i in range(0, 44):  # index 35 is leshan-1.3.0
+    for i in range(0, count):  # index 35 is leshan-1.3.0
         prev_issue_count = parse_snyk_report(versions[i], track_lifecycle, prev_issue_count)
