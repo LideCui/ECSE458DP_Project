@@ -1,5 +1,7 @@
+# ignore the Eclipse projects used for testing
 ./paho.mqtt.java
 ditto
+EclipseIoT_projects/
 
 test.json
 test.py
