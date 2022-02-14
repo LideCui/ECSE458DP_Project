@@ -5,10 +5,11 @@ import copy
 from builtins import print
 import matplotlib.pyplot as plt
 
-project_url = "https://github.com/eclipse/ditto.git"  # the web URL
-project_name = "ditto"  # the cloned folder name
+project_url = "https://github.com/eclipse/paho.mqtt.java.git"  # the web URL
 
-# statistics (each element in the list is for a specific release)
+project_name = "paho.mqtt.java"  # the cloned folder name
+
+# statistics (each element in the following list is for a specific release)
 versions = []  # list of all tags
 total = []  # list of total issues count
 source = []  # list of source code issues count
@@ -31,8 +32,13 @@ def plot_graph(dict):
     plt.plot(versions, pre, '.-', label='old issues')
     plt.plot(versions, unique, '.-', label='unique issue count')
     plt.yticks(list(range(0, max(max(total), max(unique))+1)))
-    plt.tick_params(axis='x', labelcolor='r', labelsize=10, rotation=90)
+    plt.tick_params(axis='y', labelcolor='black', labelsize=5)
+    plt.tick_params(axis='x', labelcolor='black', labelsize=8, rotation=90)
     plt.legend()
+    # plt.axvline(x="leshan-1.3.2", color='black')
+    plt.margins(x=0.01)
+    plt.subplots_adjust(left=0.02, right=0.98, bottom=0.2)
+    plt.grid(visible='true', axis='y', color='grey', linestyle='--')
     plt.show()
     return
 
@@ -108,6 +114,7 @@ def snyk_analysis(version_list, index):
     os.chdir("..")
     os.system("cp " + project_name + "/SnykOut.json " + project_name + "versionReports/" + str(current) + ".json")
     os.chdir(project_name)
+    return
 
 
 def init():
@@ -120,26 +127,90 @@ def init():
     os.system("git pull --ff-only")
     os.system("git config --global advice.detachedHead false")
     print("Current directory: " + subprocess.check_output(["pwd"]).decode("utf-8"))
-    # store CLI stdout into variable "list_files"
+    # use "--sort=creatordate" if tags on github already have correct versioning order. E.g. Kapua
+    # if not, use "--sort=version:refname", then manually place M-releases & RC-releases before gold releases
+    # (e.g. see hono_rearrange())
     list_files = subprocess.check_output(["git", "tag", "--sort=creatordate"])
+    # "list_files" stores CLI stdout
     all_versions = list_files.decode("utf-8").strip("\n").split("\n")
     print("No. of versions: " + str(len(all_versions)))
     return all_versions
+
+
+# swap two elements
+def swap(array, low, high):
+    e1 = array.pop(high)
+    e2 = array.pop(low)
+    array.insert(low, e1)
+    array.insert(high, e2)
+    return
+
+
+# used specifically for leshan due to branching releases pipeline
+def leshan_rearrange(ver_list):
+    swap(ver_list, 35, 36)  # 35 at 2.0.0-M1
+    swap(ver_list, 36, 38)
+    swap(ver_list, 37, 38)
+    e = ver_list.pop(42)
+    ver_list.insert(37, e)
+
+
+# used specifically for kura due to branching releases pipeline
+def kura_rearrange(ver_list):
+    ver_list.pop(65)
+    ver_list.pop(63)
+    ver_list.pop(61)
+    ver_list.remove("BUILD_MARKER")
+
+
+# used specifically for kapua due to branching releases pipeline
+def kapua_rearrange(ver_list):
+    ver_list.pop(40)
+    ver_list.pop(39)
+    ver_list.pop(37)
+    swap(ver_list, 21, 22)
+    ver_list.pop(0)
+
+
+# used specifically for hono due to branching releases pipeline
+def hono_rearrange(ver_list):
+    length = len(ver_list)
+    for i in range(1, length):
+        if ("-M" in ver_list[i]) and ("-M" not in ver_list[i-1]):  # need to move previous element
+            j = i
+            while (ver_list[i-1]+"-M") in ver_list[j]:
+                # keep moving the element forward until pass all Milestones
+                j += 1
+            gold = ver_list.pop(i-1)
+            ver_list.insert(j-1, gold)
+    ver_list.pop(0)  # snyk error when running 0.5-M1, discard
+    return
+
+
+# used specifically for paho due to branching releases pipeline
+def paho_rearrange(ver_list):
+    ver_list.remove("help")
 
 
 if __name__ == '__main__':
 
     # Initialization
     versions = init()
+    # leshan_rearrange(versions)
+    # kura_rearrange(versions)
+    # hono_rearrange(versions)
+    # kapua_rearrange(versions)
+    # paho_rearrange(versions)
     print(versions)
     count = len(versions)
     print("total no. of releases (tags): " + str(count))
+    # print(str(versions.index("1.1.0-M1")))
     print("\n============================Initialization Complete!=============================\n")
     # input("press enter to continue:")
 
     # Analysis
-    # for i in range(0, count):
-    #     snyk_analysis(versions, i)
+    for i in range(0, count):
+        snyk_analysis(versions, i)
     print("\n===============================Analysis Finished!!===============================\n")
 
     # Parse
