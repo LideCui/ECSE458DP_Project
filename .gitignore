@@ -10,7 +10,8 @@ data/*
 ./venv
 .idea
 **.DS_Store
+.DS_Store
 
 work_space
 infer-out
-Bokun's\ Script/*
+Bokun's\ Script/*/
