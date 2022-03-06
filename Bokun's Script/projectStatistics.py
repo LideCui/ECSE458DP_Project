@@ -1,4 +1,3 @@
-import os
 import subprocess
 
 
@@ -7,14 +6,12 @@ def count_files_and_lines():
     # only count java codes and exclude test files
     file_list = subprocess.run(["git", "ls-files"], check=True, stdout=subprocess.PIPE,text=True).stdout.strip("\n")\
         .split("\n")
-    print(file_list)
     filtered_file_list = []
     for each in file_list:
         if ("test" not in each) and (".java" in each):
             filtered_file_list.append(each)
     cyan = "\33[34m"
     file_count = len(filtered_file_list)
-    print(str(filtered_file_list))
     print("total no. of files: " + str(len(file_list)))
     print(cyan + "total non-test java files: " + str(file_count) + "\33[0m")
     line_count = 0
@@ -24,6 +21,3 @@ def count_files_and_lines():
         f.close()
     print(cyan + "total non-test java lines: " + str(line_count) + "\33[0m")
     return file_count, line_count
-
-os.chdir("leshan")
-count_files_and_lines()

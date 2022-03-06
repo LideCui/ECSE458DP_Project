@@ -4,10 +4,11 @@ import json
 import copy
 from builtins import print
 import matplotlib.pyplot as plt
+import projectStatistics
 
-project_url = "https://github.com/eclipse/paho.mqtt.java.git"  # the web URL
+project_url = "https://github.com/eclipse/leshan.git"  # the web URL
 
-project_name = "paho.mqtt.java"  # the cloned folder name
+project_name = "leshan"  # the cloned folder name
 
 # statistics (each element in the following list is for a specific release)
 versions = []  # list of all tags
@@ -18,12 +19,16 @@ fixed = []  # list of fixed issues count
 introduced = []  # list of new issues count
 pre = []  # list of old issues count
 unique = []  # list of encountered unique issues count
+stat = []  # list of statistics: [no. of files, no.of lines]
+file_ratio = []
+loc_ratio = []
 
 
 def plot_graph(dict):
     # dict: ['fingerprint' : '["introVersion", "EndVersion", <dict>]']
     # TODO: more sophisticated graph using data stored in dict
-    plt.title(project_name)
+    plt.figure()
+    plt.title(project_name + ": basic issue counts")
     plt.plot(versions, total, '.-', label='total issues')
     plt.plot(versions, source, '.-', label='source code issues')
     plt.plot(versions, test, '.-', label='test code issues')
@@ -39,6 +44,17 @@ def plot_graph(dict):
     plt.margins(x=0.01)
     plt.subplots_adjust(left=0.02, right=0.98, bottom=0.2)
     plt.grid(visible='true', axis='y', color='grey', linestyle='--')
+
+    plt.figure()
+    plt.title(project_name + ": #issues/#files & #issues/#lines")
+    # plt.plot(versions, file_ratio, '.-', label='#issues/#files')
+    plt.plot(versions, loc_ratio, '.-', label='#issues/#lines')
+    plt.tick_params(axis='y', labelcolor='black', labelsize=5)
+    plt.tick_params(axis='x', labelcolor='black', labelsize=8, rotation=90)
+    plt.margins(x=0.01)
+    plt.subplots_adjust(left=0.05, right=0.98, bottom=0.2)
+    plt.grid(visible='true', axis='y', color='grey', linestyle='--')
+    plt.legend()
     plt.show()
     return
 
@@ -109,10 +125,11 @@ def snyk_analysis(version_list, index):
     os.system("git checkout master")
     current = version_list[index]
     subprocess.run(['git', 'checkout', 'tags/' + current], stdout=subprocess.DEVNULL)  # run command, supress CLI stdout
-    print("starting Snyk analysis on: " + current + "...")
-    os.system("snyk code test --json > SnykOut.json")  # store report in a new file "SnykOut.json"
+    stat.append(projectStatistics.count_files_and_lines())
+    # print("starting Snyk analysis on: " + current + "...")
+    # os.system("snyk code test --json > SnykOut.json")  # store report in a new file "SnykOut.json"
     os.chdir("..")
-    os.system("cp " + project_name + "/SnykOut.json " + project_name + "versionReports/" + str(current) + ".json")
+    # os.system("cp " + project_name + "/SnykOut.json " + project_name + "versionReports/" + str(current) + ".json")
     os.chdir(project_name)
     return
 
@@ -194,9 +211,10 @@ def paho_rearrange(ver_list):
 
 if __name__ == '__main__':
 
+    input(" press enter to start automation script: ") # for safety
     # Initialization
     versions = init()
-    # leshan_rearrange(versions)
+    leshan_rearrange(versions)
     # kura_rearrange(versions)
     # hono_rearrange(versions)
     # kapua_rearrange(versions)
@@ -220,9 +238,15 @@ if __name__ == '__main__':
     # where the <dict> object contains the issue itself
     track_lifecycle = dict()
     prev_issue_count = 0
+
     for i in range(0, count):  # index 35 is leshan-1.3.0
         prev_issue_count = parse_snyk_report(versions[i], track_lifecycle, prev_issue_count)
     print("\n=============================Report Parse Finished!!=============================\n")
+
+    for i in range(0, count):
+        # compute ratio
+        file_ratio.append(source[i] / float(stat[i][0]))
+        loc_ratio.append(source[i] / float(stat[i][1]))
 
     # Plot
     plot_graph(track_lifecycle)
