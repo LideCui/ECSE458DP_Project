@@ -19,9 +19,27 @@ fixed = []  # list of fixed issues count
 introduced = []  # list of new issues count
 pre = []  # list of old issues count
 unique = []  # list of encountered unique issues count
-stat = []  # list of statistics: [no. of files, no.of lines]
+no_of_lines = []  # list of statistics: no. of lines
+no_of_files = []  # list of statistics: no. of files
+
+addition_btw_tags = []
+deletion_btw_tags = []
+verify_stat = []
+
 file_ratio = []
 loc_ratio = []
+new_issue_new_line_ratio = []
+
+
+def count_add_and_del(version_list):
+    print("=====in count_add_and_del====")
+    print("in directory: " + os.getcwd())
+    for i in range(0, count-1):
+        tokens = subprocess.run(["git", "diff", "--shortstat",
+                                 version_list[i], version_list[i + 1], "--", "*.java", "*.js"],
+                                check=True, stdout=subprocess.PIPE, text=True).stdout.strip("\n").split(" ")
+        addition_btw_tags.append(int(tokens[4]))
+        deletion_btw_tags.append(int(tokens[6]))
 
 
 def plot_graph(dict):
@@ -36,7 +54,7 @@ def plot_graph(dict):
     plt.plot(versions, introduced, '.-', label='new issues')
     plt.plot(versions, pre, '.-', label='old issues')
     plt.plot(versions, unique, '.-', label='unique issue count')
-    plt.yticks(list(range(0, max(max(total), max(unique))+1)))
+    plt.yticks(list(range(0, max(max(total), max(unique)) + 1)))
     plt.tick_params(axis='y', labelcolor='black', labelsize=5)
     plt.tick_params(axis='x', labelcolor='black', labelsize=8, rotation=90)
     plt.legend()
@@ -45,10 +63,22 @@ def plot_graph(dict):
     plt.subplots_adjust(left=0.02, right=0.98, bottom=0.2)
     plt.grid(visible='true', axis='y', color='grey', linestyle='--')
 
+    # #issues / #lines (java and javascript, test code included)
     plt.figure()
-    plt.title(project_name + ": #issues/#files & #issues/#lines")
-    # plt.plot(versions, file_ratio, '.-', label='#issues/#files')
+    plt.title(project_name + ": # issues / #lines")
     plt.plot(versions, loc_ratio, '.-', label='#issues/#lines')
+    plt.tick_params(axis='y', labelcolor='black', labelsize=5)
+    plt.tick_params(axis='x', labelcolor='black', labelsize=8, rotation=90)
+    plt.margins(x=0.01)
+    plt.subplots_adjust(left=0.05, right=0.98, bottom=0.2)
+    plt.grid(visible='true', axis='y', color='grey', linestyle='--')
+    plt.legend()
+    plt.show()
+
+    # # new issues / # new lines (java and javascript, test code included)
+    plt.figure()
+    plt.title(project_name + ": # new issues / # new lines")
+    plt.plot(versions, new_issue_new_line_ratio, '.-', label='#issues/#lines')
     plt.tick_params(axis='y', labelcolor='black', labelsize=5)
     plt.tick_params(axis='x', labelcolor='black', labelsize=8, rotation=90)
     plt.margins(x=0.01)
@@ -125,7 +155,9 @@ def snyk_analysis(version_list, index):
     os.system("git checkout master")
     current = version_list[index]
     subprocess.run(['git', 'checkout', 'tags/' + current], stdout=subprocess.DEVNULL)  # run command, supress CLI stdout
-    stat.append(projectStatistics.count_files_and_lines())
+    stats = projectStatistics.count_files_and_lines()  # stats is a tuple
+    no_of_files.append(stats[0])
+    no_of_lines.append(stats[1])
     # print("starting Snyk analysis on: " + current + "...")
     # os.system("snyk code test --json > SnykOut.json")  # store report in a new file "SnykOut.json"
     os.chdir("..")
@@ -193,13 +225,13 @@ def kapua_rearrange(ver_list):
 def hono_rearrange(ver_list):
     length = len(ver_list)
     for i in range(1, length):
-        if ("-M" in ver_list[i]) and ("-M" not in ver_list[i-1]):  # need to move previous element
+        if ("-M" in ver_list[i]) and ("-M" not in ver_list[i - 1]):  # need to move previous element
             j = i
-            while (ver_list[i-1]+"-M") in ver_list[j]:
+            while (ver_list[i - 1] + "-M") in ver_list[j]:
                 # keep moving the element forward until pass all Milestones
                 j += 1
-            gold = ver_list.pop(i-1)
-            ver_list.insert(j-1, gold)
+            gold = ver_list.pop(i - 1)
+            ver_list.insert(j - 1, gold)
     ver_list.pop(0)  # snyk error when running 0.5-M1, discard
     return
 
@@ -211,7 +243,7 @@ def paho_rearrange(ver_list):
 
 if __name__ == '__main__':
 
-    input(" press enter to start automation script: ") # for safety
+    input(" press enter to start automation script: ")  # for safety
     # Initialization
     versions = init()
     leshan_rearrange(versions)
@@ -219,12 +251,13 @@ if __name__ == '__main__':
     # hono_rearrange(versions)
     # kapua_rearrange(versions)
     # paho_rearrange(versions)
-    print(versions)
     count = len(versions)
+    print(versions[0])
     print("total no. of releases (tags): " + str(count))
+    count_add_and_del(versions)
     # print(str(versions.index("1.1.0-M1")))
     print("\n============================Initialization Complete!=============================\n")
-    # input("press enter to continue:")
+    input("press enter to continue:")
 
     # Analysis
     for i in range(0, count):
@@ -243,10 +276,27 @@ if __name__ == '__main__':
         prev_issue_count = parse_snyk_report(versions[i], track_lifecycle, prev_issue_count)
     print("\n=============================Report Parse Finished!!=============================\n")
 
+    verify_stat.append(no_of_lines[0])  # first version same
+    addition_btw_tags.insert(0, no_of_lines[0]) # first version, use total no. of lines as "addition"
+    deletion_btw_tags.insert(0, 0)  # first version, use 0 as no. of deleted lines
     for i in range(0, count):
         # compute ratio
-        file_ratio.append(source[i] / float(stat[i][0]))
-        loc_ratio.append(source[i] / float(stat[i][1]))
+        file_ratio.append(total[i] / float(no_of_files[i]))
+        loc_ratio.append(total[i] / float(no_of_lines[i]))
+        new_issue_new_line_ratio.append(introduced[i] / float(addition_btw_tags[i]))
 
+        if i != count - 1:
+            verify_stat.append(no_of_lines[i] + addition_btw_tags[i] - deletion_btw_tags[i])
+
+    # verification
+    print("no of element in addition_btw_tags: " + str(len(addition_btw_tags)))
+    print("no of element in deletion_btw_tags: " + str(len(deletion_btw_tags)))
+    print("no of element in no_of_lines: " + str(len(no_of_lines)))
+    print("no_of_lines: " + str(no_of_lines))
+    print("verify_stat: " + str(verify_stat))
+    # Expectation: no_of_lines[n+1] = no_of_lines[n] + addition_btw_tags[n] - deletion_btw_tags[n]
     # Plot
+    input("pause, press enter to plot graph:")
+    print("introduced: " + str(introduced))
+    print("addition_btw_tags: : " + str(addition_btw_tags))
     plot_graph(track_lifecycle)
