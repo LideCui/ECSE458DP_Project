@@ -10,7 +10,7 @@ def count_files_and_lines():
     filtered_file_list = []
     for each in file_list:
         # if ("test" not in each) and (".java" in each):
-        if (".js" in each) or (".java" in each):  # for leshan, only javascript and java issues detected across 44 tags
+        if (".java" in each):  # for leshan, only javascript and java issues detected across 44 tags
             filtered_file_list.append(each)
     cyan = "\33[34m"
     file_count = len(filtered_file_list)

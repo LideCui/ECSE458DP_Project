@@ -36,7 +36,7 @@ def count_add_and_del(version_list):
     print("in directory: " + os.getcwd())
     for i in range(0, count-1):
         tokens = subprocess.run(["git", "diff", "--shortstat",
-                                 version_list[i], version_list[i + 1], "--", "*.java", "*.js"],
+                                 version_list[i], version_list[i + 1], "--", "*.java"],
                                 check=True, stdout=subprocess.PIPE, text=True).stdout.strip("\n").split(" ")
         addition_btw_tags.append(int(tokens[4]))
         deletion_btw_tags.append(int(tokens[6]))
@@ -73,7 +73,6 @@ def plot_graph(dict):
     plt.subplots_adjust(left=0.05, right=0.98, bottom=0.2)
     plt.grid(visible='true', axis='y', color='grey', linestyle='--')
     plt.legend()
-    plt.show()
 
     # # new issues / # new lines (java and javascript, test code included)
     plt.figure()
@@ -286,7 +285,7 @@ if __name__ == '__main__':
         new_issue_new_line_ratio.append(introduced[i] / float(addition_btw_tags[i]))
 
         if i != count - 1:
-            verify_stat.append(no_of_lines[i] + addition_btw_tags[i] - deletion_btw_tags[i])
+            verify_stat.append(no_of_lines[i] + addition_btw_tags[i+1] - deletion_btw_tags[i+1])
 
     # verification
     print("no of element in addition_btw_tags: " + str(len(addition_btw_tags)))
