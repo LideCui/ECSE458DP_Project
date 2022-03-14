@@ -9,6 +9,7 @@ import re
 import json
 import matplotlib.pyplot as plt
 import numpy as np
+import c_projectStatistics
 
 
 # --------------------------- function definition -----------------------------
@@ -45,7 +46,7 @@ tag: specific release version of the project
 path: path to the working directory
 Return: total count of issues, severity count, code count
 '''
-def pvs_num_of_issues_per_type_one_release(tag, path_to_project, verbal=False):
+def pvs_num_of_issues_per_type_one_release(tag, path_to_project, verbal=False, include_test=True):
     with open(path_to_project + tag + ".txt") as f:
         lines = f.read().splitlines()         # read in the lines without the newline char  
     # my severity count table    
@@ -67,7 +68,14 @@ def pvs_num_of_issues_per_type_one_release(tag, path_to_project, verbal=False):
         # print the path of the occurrence of the issue
         content_btw_squarebracket = re.findall("\[(.*?)\]", split[2])
         path = re.split(", ", content_btw_squarebracket[-1])    # only at the end of the list is my path
-        issue_count = len(path)
+        
+        issue_count = 0
+        if (include_test == False):
+            for p in path:
+                if ('test' not in p):
+                    issue_count += 1
+        else:
+            issue_count = len(path)
 
         ## THEN COUNT
         # totalissues
@@ -114,14 +122,16 @@ path_to_project: path to the working directory
 return: the list of tags
 '''
 def cal_changed_lines(path_to_project):
-    str = subprocess.check_output(['git', 'tag', '--sort=-creatordate'], cwd=path_to_project)
+    str = subprocess.check_output(['git', 'tag', '--sort=creatordate'], cwd=path_to_project)
     tag_lst = str.decode("utf-8").split("\n")[:-1]         ## decode the bytes into string and drop last term
-    
-    tag_lst = list(reversed(tag_lst))
 
+    print(f"Original tag list {tag_lst} with size {len(tag_lst)}")
+    leshan_rearrange(tag_lst)
+
+    ## check the changed lines and files information in consecutive versions
     changed_lst = ['null']                                 ## have a null at the first tag since it has no version to compare with
     for i in range(len(tag_lst) - 1):
-        str = subprocess.check_output(['git', 'diff', '--shortstat', tag_lst[i], tag_lst[i+1]], cwd=path_to_project)
+        str = subprocess.check_output(['git', 'diff', '--shortstat', tag_lst[i], tag_lst[i+1], '*.java'],cwd=path_to_project)
         changed_lst.append(str.decode('utf8').split("\n")[0])
 
     ## then parse the changed lst:
@@ -143,21 +153,22 @@ version_list: tags of the project
 path_to_project: path to the working directory
 changed_lst: changed information across the versions
 '''
-def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_change=None, add_change=None, del_change=None):
+def pvs_plot_comparison(version_list, path_to_output, changed_lst=None, file_change=None, add_change=None, del_change=None
+, num_of_lines=None, num_of_files=None):
     ## first create empty statistics lists
     total_list = []
     severity_h_list = []
     severity_m_list = []
     severity_l_list = []
     code_list = []
-    pretty_version_list = []
+    pretty_version_list = []   # a prettier version list parsed from the 7th index
     # count the differences between releases:
     last_total = 0
     total_diff = []
 
     ## count issues per version
     for v in version_list:
-        total, severity, code = pvs_num_of_issues_per_type_one_release(v, path_to_project)
+        total, severity, code = pvs_num_of_issues_per_type_one_release(v, path_to_output, include_test=False)
         total_diff.append(total - last_total)
         last_total = total
         total_list.append(total)
@@ -167,7 +178,9 @@ def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_ch
         code_list.append(code)
         pretty_version_list.append(v[7:])
 
-    # the first element of issue_difference is 0
+
+
+    # modify the first element of issue_difference is 0
     total_diff[0] = 0
 
     # calculate a list of new issues:
@@ -177,12 +190,18 @@ def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_ch
             new_issues.append(0)
         else:
             new_issues.append(total_diff[i])
-
+ 
     # calculate net lines changed(dirivative)
     net_lines_changed = np.array(add_change)-np.array(del_change)
 
     # calculate differential of issues/net_line_changed
-    issue_diff_per_tag = np.array(total_diff) / np.array(net_lines_changed)
+    issue_differential_per_tag = np.array(total_diff) / np.array(net_lines_changed)
+
+    # calculate total_issues per lines each tag:
+    total_issues_per_lines = np.array(total_list) / np.array(num_of_lines)
+
+    # calculate total_issues per java files each tag:
+    total_issues_per_java = np.array(total_list) / np.array(num_of_files)
 
     # calculate new issues per added lines:
     new_issues_per_new_lines = np.array(new_issues) / np.array(add_change)
@@ -201,7 +220,7 @@ def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_ch
     plots_total[1,0].plot(pretty_version_list, severity_m_list, '.-', label='medium')
     plots_total[1,0].plot(pretty_version_list, severity_l_list, '.-', label='low')
     plots_total[1,0].legend()
-    # plot: total-difference between releases
+    # plot: total issues differences between releases
     plots_total[0,1].set_title('Total differences -- version', size=16)
     plots_total[0,1].plot(pretty_version_list, total_diff, '.-', label='total differences')
     plt.setp(plots_total[0,0].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
@@ -210,7 +229,7 @@ def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_ch
     plt.show() # this is a blocking call; kill the plotting window to continue execution
 
     
-    ## plotting-2
+    ## plotting-2: statistics btw versions
     _, plots_new = plt.subplots(2,2)
     plots_new[0,0].set_title('Lines deleted per release', size=16)
     plots_new[0,0].plot(pretty_version_list, del_change, '.-', label='lines deleted')
@@ -230,28 +249,69 @@ def pvs_plot_comparison(version_list, path_to_project, changed_lst=None, file_ch
     plt.show() # this is a blocking call; kill the plotting window to continue execution
 
 
+    ## plotting3
+    _, plots_result1 = plt.subplots(1,2)
+    plots_result1[0].set_title('total issues per number of lines', size=16)
+    plots_result1[0].plot(pretty_version_list, total_issues_per_lines, '.-', label='total_issues / #lines') 
+    plots_result1[1].set_title('Total issues per java files', size=16)
+    plots_result1[1].plot(pretty_version_list, total_issues_per_java, '.-', label='total_issues / #javas') 
+    plt.setp(plots_result1[0].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
+    plt.setp(plots_result1[1].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
+    plt.show() # this is a blocking call; kill the plotting window to continue execution
+
+
+    ## plotting4
     _, plots_result1 = plt.subplots(1,2)
     plots_result1[0].set_title('Differential of issues/1000net_line_changed', size=16)
-    plots_result1[0].plot(pretty_version_list, issue_diff_per_tag*1000, '.-', label='differential of issues/net_line_changed') 
+    plots_result1[0].plot(pretty_version_list, issue_differential_per_tag*1000, '.-', label='differential of issues/net_line_changed') 
     plots_result1[1].set_title('New issues/1000lines added', size=16)
     plots_result1[1].plot(pretty_version_list, new_issues_per_new_lines*1000, '.-', label='New issues/lines added') 
     plt.setp(plots_result1[0].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
     plt.setp(plots_result1[1].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
     plt.show() # this is a blocking call; kill the plotting window to continue execution
 
-
+    ## plotting5
     _, plots_result2 = plt.subplots(1,2)
     plots_result2[0].set_title('New issues/files added', size=16)
     plots_result2[0].plot(pretty_version_list, issue_diff_per_file_changed, '.-', label='differential of issues/net_line_changed') 
-    # plots_result2[1].set_title('New issues/1000lines added', size=16)
-    # plots_result2[1].plot(pretty_version_list, new_issues_per_new_lines*1000, '.-', label='New issues/lines added') 
     plt.setp(plots_result2[0].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
     plt.setp(plots_result2[1].xaxis.get_majorticklabels(),rotation=90,horizontalalignment='right')
     plt.show() # this is a blocking call; kill the plotting window to continue executio
 
+
+#### ===================== HARD CODE HELPERS ===================== ####
+# used specifically for leshan due to branching releases pipeline
+def leshan_rearrange(ver_list):
+    swap(ver_list, 35, 36)  # 35 at 2.0.0-M1
+    swap(ver_list, 36, 38)
+    swap(ver_list, 37, 38)
+    e = ver_list.pop(42)
+    ver_list.insert(37, e)
+
+# swap two elements
+def swap(array, low, high):
+    e1 = array.pop(high)
+    e2 = array.pop(low)
+    array.insert(low, e1)
+    array.insert(high, e2)
+    return
+
+
 if __name__ == '__main__': 
     print("\n================== PVS Analysis Result ==================")
-
+    
+    # Run git diff to get version list and changed lines information
     version_list, changed_lst, file_change, add_change, del_change = cal_changed_lines("./leshan")
+    
+    num_of_files, num_of_lines = [], []   # number of files and lines per tag
+    ## Count java_files in each of the version
+    for v in version_list:
+        files, lines = c_projectStatistics.count_files_and_lines_no_filter(v, "./leshan")
+        num_of_files.append(files)
+        num_of_lines.append(lines)
 
-    pvs_plot_comparison(version_list, "pvs_infer/", changed_lst, file_change=file_change, add_change=add_change, del_change=del_change)      ## the scaling is not very
+    # print(num_of_lines)
+
+    # ## then plot
+    pvs_plot_comparison(version_list, "pvs_leshan/", changed_lst, file_change=file_change, add_change=add_change, 
+        del_change=del_change, num_of_files=num_of_files, num_of_lines=num_of_lines)      ## the scaling is not very
